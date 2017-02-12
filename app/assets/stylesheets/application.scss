@@ -1,0 +1,112 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ * require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'vendor/*';
+@import 'components/theme';
+
+ /*styles to bring over:*/
+
+ .btn.apply {
+   line-height: 30px;
+   color:#fff;
+   margin-top: 22px;
+ }
+ .btn.apply:hover {
+   background-color: #fff !important;
+   color: #c39d6d !important;
+   border: 2px solid #ad8b60 !important;
+ }
+
+ .navbar-header > .navbar-brand {
+   color: #111111 !important;
+   margin-top: 10px;
+ }
+
+ #portfolio > .container > h5  {
+   text-align: center;
+   margin: 40px 0 30px 0;
+ }
+
+ .slide {
+   position: relative;
+   margin: 0 auto;
+   max-width: 110vh;
+   width: auto;
+ }
+
+ #header-banner {
+   background-color: #ebebeb;
+   background-size: cover;
+   background-position: center;
+   background-color: #cccccc;
+   background-repeat: no-repeat;
+ }
+
+ #header-banner.demo-1 {
+   background-image: asset-url("2104_baybrook/front.jpg");
+ }
+ .project-info .info p {
+  display: inline-block;
+ }
+ .project-info .info .title {
+   font-weight: bold;
+ }
+ .project-info .info .details {
+   max-width: 75%;
+   vertical-align: top;
+ }
+
+ .map-container {
+   position: relative; /* IE needs a position other than static */
+ }
+ .map-container iframe{
+   width: 100%;
+   min-height: 400px;
+   pointer-events: none;
+ }
+ .map-container iframe.clicked {
+   pointer-events: auto;
+ }
+
+ .navbar-toggle .icon-bar {
+   width: 22px;
+   transition: all 0.2s;
+   height: 2px !important;
+ }
+ .navbar-toggle .top-bar {
+   transform: rotate(45deg);
+   transform-origin: 10% 10%;
+ }
+ .navbar-toggle .middle-bar {
+   opacity: 0;
+ }
+ .navbar-toggle .bottom-bar {
+   transform: rotate(-45deg);
+   transform-origin: 10% 90%;
+ }
+ .navbar-toggle.collapsed .top-bar {
+   transform: rotate(0);
+ }
+ .navbar-toggle.collapsed .middle-bar {
+   opacity: 1;
+ }
+ .navbar-toggle.collapsed .bottom-bar {
+   transform: rotate(0);
+ }
+
+ /*end styles to bring */

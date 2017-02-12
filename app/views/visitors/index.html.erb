@@ -1,4 +1,84 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<!-- header-banner -->
+<div id="header-banner" class="demo-1">
+  <div class="banner-content text-center">
+      <div class="banner-info">
+          <h1>AM Properties</h1>
+          <p>Homes for rent in Columbia, Missouri</p>
+      </div><!-- / banner-info -->
+  </div><!-- / banner-content -->
+</div>
+<!-- / header-banner -->
+
+<!-- portfolio section -->
+<section id="portfolio" class="info-box">
+    <div class="container">
+        <!-- portfolio filter -->
+        <h5>View our rentals</h5>
+        <ul class="portfolio-filter list-inline text-center">
+          <p>
+            FILTER BY:
+          </p>
+            <li><a href="#" data-group="all" class="active">ALL</a></li>
+            <li><a href="#" data-group="available">AVAILABLE</a></li>
+        </ul>
+        <!--end portfolio filter-->
+        <ul class="row portfolio list-unstyled lightbox" id="grid">
+            <!-- project -->
+
+            <%# 8.times do |i| %>
+            <li class="col-xs-6 col-md-4 project" data-groups='["illustration"]'>
+              <div class="img-bg-color primary">
+                  <a href="single-project.html" class="project-link"></a>
+                  <!-- / project-link -->
+                    <%= image_tag "2104_baybrook/front.jpg" %>
+                  <!-- / project-image -->
+
+                  <!-- project-hover-tools -->
+                  <div class="project-hover-tools">
+                      <a href="single-project.html" class="view-btn">
+                          <i class="lnr lnr-eye"></i>
+                      </a>
+                      <a href="#gallery1" class="open-gallery open-gallery-link">
+                          <i class="lnr lnr-frame-expand"></i>
+                      </a>
+
+                  </div><!-- / project-hover-tools -->
+
+                  <div id="gallery1" class="mfp-hide gallery-container">
+                    <div class="slide">
+                      <%= image_tag "2104_baybrook/front.jpg" %>
+                    </div>
+                    <div class="slide">
+                      <%= image_tag "2104_baybrook/dining-room.jpg" %>
+                    </div>
+                    <div class="slide">
+                        <%= image_tag "2104_baybrook/living-room.jpg" %>
+                    </div>
+                    <div class="slide">
+                        <%= image_tag "2104_baybrook/living-room.jpg" %>
+                    </div>
+                    <div class="slide">
+                      <%= image_tag "2104_baybrook/living-room.jpg" %>
+                    </div>
+                  </div>
+
+                  <!-- project-details -->
+                  <div class="project-details">
+                      <h5 class="project-title">2104 Baybrook</h5>
+                      <p class="skill">3 bed, 2.5 bath</p>
+                  </div><!-- / project-details -->
+                  <!-- project-details -->
+              </div><!-- / img-bg-color -->
+          </li>
+            <!-- / project -->
+            <%# end %>
+
+            <!-- sizer -->
+            <li class="col-xs-6 col-md-4 shuffle_sizer"></li>
+        </ul> <!-- / projects -->
+    </div><!-- / container -->
+
+</section>
+<!-- / portfolio section -->
+
+<!-- / content -->
