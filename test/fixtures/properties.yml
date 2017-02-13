@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyString
+  available: false
+  features: MyString
+  rate: MyString
+  pets: MyString
+  directions: MyString
+
+two:
+  address: MyString
+  available: false
+  features: MyString
+  rate: MyString
+  pets: MyString
+  directions: MyString
