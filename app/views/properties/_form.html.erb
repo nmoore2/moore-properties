@@ -11,37 +11,65 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
+  <div class="row input-wrapper">
+    <div class="col-xs-12 col-sm-1">
+      <%= f.label :title %>
+    </div>
+    <div class="col-xs-12 col-sm-11">
+      <%= f.text_field :title %>
+    </div>
+    <div class="col-xs-12 col-sm-1">
+      <%= f.label :address %>
+    </div>
+    <div class="col-xs-12 col-sm-11">
+      <%= f.text_field :address %>
+    </div>
+    <div class="col-xs-12 col-sm-1">
+      <%= f.label :available %>
+    </div>
+    <div class="col-xs-12 col-sm-11">
+      <%= f.check_box :available %>
+    </div>
+    <div class="clearfix">
 
-  <div class="field">
-    <%= f.label :available %>
-    <%= f.check_box :available %>
-  </div>
+    </div>
+    <div class="col-xs-12 col-sm-1">
+      <%= f.label :features %>
+    </div>
+    <div class="col-xs-12 col-sm-11">
+      <%= f.text_area :features %>
+    </div>
+    <div class="col-xs-12 col-sm-1">
+      <%= f.label :rate %>
+    </div>
+    <div class="col-xs-12 col-sm-11">
+      <%= f.text_field :rate %>
+    </div>
+    <div class="col-xs-12 col-sm-1">
+      <%= f.label :pets %>
+    </div>
+    <div class="col-xs-12 col-sm-11">
+      <%= f.text_field :pets %>
+    </div>
+    <div class="col-xs-12 col-sm-1">
+      <%= f.label :directions %>
+    </div>
+    <div class="col-xs-12 col-sm-11">
+      <%= f.text_area :directions %>
+    </div>
+</div>
+<div class="row">
+  <label>Images</label>
+<%= f.file_field :image %>
+<%= f.hidden_field :image_cache %>
+</div>
 
-  <div class="field">
-    <%= f.label :features %>
-    <%= f.text_area :features %>
-  </div>
-
-  <div class="field">
-    <%= f.label :rate %>
-    <%= f.text_field :rate %>
-  </div>
-
-  <div class="field">
-    <%= f.label :pets %>
-    <%= f.text_field :pets %>
-  </div>
-
-  <div class="field">
-    <%= f.label :directions %>
-    <%= f.text_field :directions %>
-  </div>
-
+<div class="row">
   <div class="actions">
-    <%= f.submit %>
+    <a class='btn btn-success' >
+      <%= f.submit %>
+    </a>
   </div>
+</div>
+
 <% end %>

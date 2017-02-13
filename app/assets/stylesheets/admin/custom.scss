@@ -4,6 +4,35 @@
   padding: 0 25px;
 }
 
+h1 {
+  margin-bottom: 40px;
+}
+
 footer {
   margin-top: 50px;
+}
+
+.btn input {
+  background: transparent;
+  border: none;
+}
+
+input, textarea {
+  width: 40%;
+  min-width: 300px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+
+.actions {
+  padding: 20px 0;
+}
+
+.input-wrapper {
+  div {
+    margin: 10px 0;
+  }
 }

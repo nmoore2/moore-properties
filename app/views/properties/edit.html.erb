@@ -1,6 +1,6 @@
-<h1>Editing Property</h1>
+<h1>Editing <%= @property.address %></h1>
 
 <%= render 'form', property: @property %>
-
-<%= link_to 'Show', @property %> |
-<%= link_to 'Back', properties_path %>
+<%= image_tag @property.image.thumb.url, class: 'img-thumbnail' %>
+<%= link_to 'View', @property, class: "btn btn-primary" %> |
+<%= link_to 'All Properties', properties_path, class: 'btn btn-default' %>

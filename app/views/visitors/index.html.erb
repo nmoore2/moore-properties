@@ -25,8 +25,9 @@
         <ul class="row portfolio list-unstyled lightbox" id="grid">
             <!-- project -->
 
-            <%# 8.times do |i| %>
+            <% @properties.each do |prop| %>
             <li class="col-xs-6 col-md-4 project" data-groups='["illustration"]'>
+              <a href="<%= property_path(prop) %>" style="display: block; width: 100%; height; 100%;">
               <div class="img-bg-color primary">
                   <a href="single-project.html" class="project-link"></a>
                   <!-- / project-link -->
@@ -35,7 +36,7 @@
 
                   <!-- project-hover-tools -->
                   <div class="project-hover-tools">
-                      <a href="single-project.html" class="view-btn">
+                      <a href="<%= property_path(prop) %>" class="view-btn">
                           <i class="lnr lnr-eye"></i>
                       </a>
                       <a href="#gallery1" class="open-gallery open-gallery-link">
@@ -64,14 +65,15 @@
 
                   <!-- project-details -->
                   <div class="project-details">
-                      <h5 class="project-title">2104 Baybrook</h5>
+                      <h5 class="project-title"><%= prop.address %></h5>
                       <p class="skill">3 bed, 2.5 bath</p>
                   </div><!-- / project-details -->
                   <!-- project-details -->
               </div><!-- / img-bg-color -->
+              <% end %>
           </li>
             <!-- / project -->
-            <%# end %>
+          </a>
 
             <!-- sizer -->
             <li class="col-xs-6 col-md-4 shuffle_sizer"></li>

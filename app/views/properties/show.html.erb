@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
-  <strong>Address:</strong>
-  <%= @property.address %>
+  <strong>Name:</strong>
+  <%= @property.title %>
 </p>
 
 <p>
@@ -30,5 +31,5 @@
   <%= @property.directions %>
 </p>
 
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+<%= link_to 'Edit', edit_property_path(@property), class: "btn btn-primary" %> |
+<%= link_to 'Back', properties_path, class: "btn btn-primary" %>

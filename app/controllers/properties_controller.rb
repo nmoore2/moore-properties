@@ -70,6 +70,6 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:address, :available, :features, :rate, :pets, :directions)
+      params.require(:property).permit(:address, :available, :features, :rate, :pets, :directions, :title, :image)
     end
 end
