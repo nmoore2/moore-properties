@@ -17,6 +17,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 
+gem 'cloudinary'
+
 gem 'mini_magick', '~> 4.6', '>= 4.6.1'
 
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
