@@ -59,7 +59,7 @@ class ImagesController < ApplicationController
     @property = @image.property
     @image.destroy
     respond_to do |format|
-      format.html { redirect_to edit_property_path(@property), notice: 'Image was successfully destroyed.' }
+      format.html { redirect_to edit_property_path(@property), notice: 'Image was successfully deleted.' }
       format.json { head :no_content }
     end
   end

@@ -25,18 +25,22 @@
         <ul class="row portfolio list-unstyled lightbox" id="grid">
             <!-- project -->
 
-            <% @properties.each do |prop| %>
+            <% @properties.each do |property| %>
             <li class="col-xs-6 col-md-4 project" data-groups='["illustration"]'>
-              <a href="<%= property_path(prop) %>" style="display: block; width: 100%; height; 100%;">
+              <a href="<%= property_path(property) %>" style="display: block; width: 100%; height; 100%;">
               <div class="img-bg-color primary">
                   <a href="single-project.html" class="project-link"></a>
                   <!-- / project-link -->
-                    <%= image_tag "2104_baybrook/front.jpg" %>
+                  <% if !property.images.empty? %>
+                    <%= image_tag property.images.first.image.url, class: 'img-responsive' %>
+                  <% else %>
+                  <img src="http://placehold.it/350x250" class='img-responsive'>
+                  <% end %>
                   <!-- / project-image -->
 
                   <!-- project-hover-tools -->
                   <div class="project-hover-tools">
-                      <a href="<%= property_path(prop) %>" class="view-btn">
+                      <a href="<%= property_path(property) %>" class="view-btn">
                           <i class="lnr lnr-eye"></i>
                       </a>
                       <a href="#gallery1" class="open-gallery open-gallery-link">
@@ -65,7 +69,7 @@
 
                   <!-- project-details -->
                   <div class="project-details">
-                      <h5 class="project-title"><%= prop.address %></h5>
+                      <h5 class="project-title"><%= property.address %></h5>
                       <p class="skill">3 bed, 2.5 bath</p>
                   </div><!-- / project-details -->
                   <!-- project-details -->
