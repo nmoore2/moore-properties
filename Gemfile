@@ -15,9 +15,11 @@ gem 'puma', '~> 3.0'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 
 gem 'mini_magick', '~> 4.6', '>= 4.6.1'
+
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 gem 'pry', '~> 0.10.4'
 # Use SCSS for stylesheets
