@@ -1,0 +1,13 @@
+development:
+ cloud_name: hdldnogif
+ api_key: '339574646437871'
+ api_secret: 8tAIhngcSrQWZJJzYf7L9o2PTAs
+ enhance_image_tag: true
+ static_image_support: true
+
+production:
+ cloud_name: hdldnogif
+ api_key: '339574646437871'
+ api_secret: 8tAIhngcSrQWZJJzYf7L9o2PTAs
+ enhance_image_tag: true
+ static_image_support: true
