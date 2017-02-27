@@ -1,4 +1,6 @@
 class PropertiesController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
+
   before_action :set_property, only: [:show, :edit, :update, :destroy]
   layout "admin"
 
@@ -11,15 +13,18 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
+    @images = @property.images.all
   end
 
   # GET /properties/new
   def new
     @property = Property.new
+    @image = Image.new
   end
 
   # GET /properties/1/edit
   def edit
+    @image = Image.new
   end
 
   # POST /properties
@@ -70,6 +75,6 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:address, :available, :features, :rate, :pets, :directions, :title, :image)
+      params.require(:property).permit!
     end
 end

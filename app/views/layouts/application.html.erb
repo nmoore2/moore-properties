@@ -13,7 +13,7 @@
 <!-- favicon -->
 <link rel="icon" href="images/favicon.png">
 <!-- page title -->
-<title>AM Properties</title>
+<title><%= content_for?(:title) ? yield(:title) : "Moore Properties" %></title>
 <!-- bootstrap css -->
 <!-- css -->
 <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
