@@ -25,59 +25,48 @@
         <ul class="row portfolio list-unstyled lightbox" id="grid">
             <!-- project -->
 
-            <% @properties.each do |property| %>
-            <li class="col-xs-6 col-md-4 project" data-groups='["illustration"]'>
-              <a href="<%= property_path(property) %>" style="display: block; width: 100%; height; 100%;">
-              <div class="img-bg-color primary">
-                  <a href="single-project.html" class="project-link"></a>
+          <% @properties.each_with_index do |property, index| %>
+            <li class="col-xs-6 col-md-4 project project-link" data-groups='["illustration"]'>
                   <!-- / project-link -->
                   <% if !property.images.empty? %>
-                    <%= image_tag property.images.first.image.url, class: 'img-responsive' %>
+                      <div href="#gallery<%= index %>" class="featured-img" style="background-image: url(<%= cl_image_path property.images.first.image.url %>)">
+                        <!-- project-hover-tools -->
+                        <div class="project-hover-tools center">
+                            <a href="<%= property_path(property) %>" class="view-btn">
+                                <i class="lnr lnr-eye"></i>
+                            </a>
+                            <a href="#gallery<%= index %>" class="open-gallery open-gallery-link">
+                                <i class="lnr lnr-frame-expand"></i>
+                            </a>
+                        </div><!-- / project-hover-tools -->
+                      </div>
                   <% else %>
-                  <img src="http://placehold.it/350x250" class='img-responsive'>
+                    <img src="http://placehold.it/350x250" class='img-responsive'>
                   <% end %>
                   <!-- / project-image -->
 
-                  <!-- project-hover-tools -->
-                  <div class="project-hover-tools">
-                      <a href="<%= property_path(property) %>" class="view-btn">
-                          <i class="lnr lnr-eye"></i>
-                      </a>
-                      <a href="#gallery1" class="open-gallery open-gallery-link">
-                          <i class="lnr lnr-frame-expand"></i>
-                      </a>
-
-                  </div><!-- / project-hover-tools -->
-
-                  <div id="gallery1" class="mfp-hide gallery-container">
+                  <div id="gallery<%= index %>" class="mfp-hide gallery-container">
+                    <% property.images.each do |image|  %>
                     <div class="slide">
-                      <%= image_tag "2104_baybrook/front.jpg" %>
+                      <%= cl_image_tag image.image %>
                     </div>
-                    <div class="slide">
-                      <%= image_tag "2104_baybrook/dining-room.jpg" %>
-                    </div>
-                    <div class="slide">
-                        <%= image_tag "2104_baybrook/living-room.jpg" %>
-                    </div>
-                    <div class="slide">
-                        <%= image_tag "2104_baybrook/living-room.jpg" %>
-                    </div>
-                    <div class="slide">
-                      <%= image_tag "2104_baybrook/living-room.jpg" %>
-                    </div>
+                    <% end %>
                   </div>
 
                   <!-- project-details -->
+                <a href="<%= property_path(property) %>" style="display: block;" class="img-bg-color primary">
                   <div class="project-details">
-                      <h5 class="project-title"><%= property.address %></h5>
+                      <h5 class="project-title"><%= property.title %></h5>
                       <p class="skill">3 bed, 2.5 bath</p>
                   </div><!-- / project-details -->
+                </a>
+
                   <!-- project-details -->
-              </div><!-- / img-bg-color -->
-              <% end %>
-          </li>
+              </a><!-- / img-bg-color -->
+            </li>
             <!-- / project -->
-          </a>
+          <% end %>
+
 
             <!-- sizer -->
             <li class="col-xs-6 col-md-4 shuffle_sizer"></li>

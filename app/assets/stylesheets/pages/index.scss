@@ -1,3 +1,16 @@
 .index {
-
+  .project-details {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .featured-img {
+    min-height: 250px;
+    position: relative;
+    background-size: cover;
+    .project-hover-tools {
+      width: 100%;
+      top: 45%;
+    }
+  }
 }
