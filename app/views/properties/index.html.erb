@@ -1,3 +1,5 @@
+<div clas="row">
+
 <% title "Properties" %>
 
 <div class="site-width">
@@ -8,12 +10,10 @@
     <thead>
       <tr>
         <th>Title</th>
-        <th>Available</th>
-        <!-- <th>Features</th> -->
-        <th>Rate</th>
-        <th>Features</th>
-        <!-- <th>Directions</th> -->
-        <th colspan="3"></th>
+        <th class="hidden-mobile" >Available</th>
+        <th class="hidden-mobile">Rate</th>
+        <th class="hidden-mobile">Features</th>
+        <th colspan="2"></th>
       </tr>
     </thead>
 
@@ -21,11 +21,9 @@
       <% @properties.each do |property| %>
         <tr>
           <td><%= property.title %></td>
-          <td><%= property.available %></td>
-          <!-- <td><%# property.features %></td> -->
-          <td><%= property.rate %></td>
-          <td><%= property.features %></td>
-          <!-- <td><%# property.directions %></td> -->
+          <td class="hidden-mobile"><%= property.available %></td>
+          <td class="hidden-mobile"><%= property.rate %></td>
+          <td class="hidden-mobile"><%= property.features %></td>
           <td><%= link_to 'View', property, class: "btn btn-primary" %></td>
           <td><%= link_to 'Edit', edit_property_path(property), class: "btn btn-success" %></td>
           <td><%= link_to 'Delete', property, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -37,4 +35,5 @@
   <br>
 
   <%= link_to 'New Property', new_property_path, class: 'btn btn-primary' %>
+</div>
 </div>

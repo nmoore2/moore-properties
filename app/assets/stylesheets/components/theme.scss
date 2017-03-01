@@ -675,7 +675,25 @@ input:focus {
 }
 
 .project .img-bg-color.primary {
-    background: $primary;
+    background-color: $primary;
+}
+.project .overlay {
+  background-color: $primary;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition:  ease-in-out 0.3s;
+  -moz-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+.project .featured-img {
+  &:hover {
+    .overlay {
+      opacity: .75;
+    }
+  }
 }
 
 .project .img-bg-color.default {

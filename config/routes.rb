@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   # Admin Resources
   #-----------------------------------------
   devise_for :users
+
   devise_scope :user do
+    # get "/users/sign_up",  :to => "visitors#index"
     get "/admin" => "properties#index" # custom path to login/sign_in
   end
   resources :images
