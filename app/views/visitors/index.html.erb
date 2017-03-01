@@ -32,7 +32,7 @@
                     <div href="#gallery<%= index %>" class="featured-img" style="background-image: url(<%= cl_image_path property.images.first.image.url %>)">
                       <!-- project-hover-tools -->
                       <div class="project-hover-tools center">
-                          <a href="<%= prop_path(property) %>" class="view-btn">
+                          <a href="<%= property_path(property) %>" class="view-btn">
                               <i class="lnr lnr-eye"></i>
                           </a>
                           <a href="#gallery<%= index %>" class="open-gallery open-gallery-link">
@@ -54,7 +54,7 @@
                   </div>
 
                   <!-- project-details -->
-                <a href="<%= prop_path(property) %>" style="display: block;" class="img-bg-color primary">
+                <a href="<%= property_path(property) %>" style="display: block;" class="img-bg-color primary">
                   <div class="project-details">
                       <h5 class="project-title"><%= property.title %></h5>
                       <p class="skill">3 bed, 2.5 bath</p>

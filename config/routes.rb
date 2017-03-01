@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   #-----------------------------------------
   # Public
   #-----------------------------------------
-  get '/property(/:id)', to: 'pages#property', as: 'prop'
+  # get '/property(/:id)', to: 'pages#property', as: 'prop'
 
   root 'visitors#index'
 

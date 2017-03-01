@@ -1,8 +1,8 @@
 class PropertiesController < ApplicationController
   skip_before_filter  :verify_authenticity_token
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:show]
   before_action :set_property, only: [:show, :edit, :update, :destroy]
-  layout "devise"
+  layout "devise", except: [:show]
 
   # GET /properties
   # GET /properties.json
@@ -14,6 +14,7 @@ class PropertiesController < ApplicationController
   # GET /properties/1.json
   def show
     @images = @property.images.all
+    @properties = Property.all
   end
 
   # GET /properties/new
