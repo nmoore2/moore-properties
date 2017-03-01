@@ -10,6 +10,8 @@
 <meta name="keywords" content="responsive, retina ready, html5, css3, creative, portfolio, bootstrap theme" />
 <meta name="author" content="KingStudio.ro">
 
+<%= csrf_meta_tags %>
+
 <!-- favicon -->
 <link rel="icon" href="images/favicon.png">
 <!-- page title -->
@@ -44,6 +46,14 @@
   <%= render 'admin/nav' %>
 
 <div class="site-width">
+
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
   <%= yield %>
 </div>
 

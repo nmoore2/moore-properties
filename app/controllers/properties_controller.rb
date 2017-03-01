@@ -1,8 +1,8 @@
 class PropertiesController < ApplicationController
   skip_before_filter  :verify_authenticity_token
-
+  before_action :authenticate_user!
   before_action :set_property, only: [:show, :edit, :update, :destroy]
-  layout "admin"
+  layout "devise"
 
   # GET /properties
   # GET /properties.json

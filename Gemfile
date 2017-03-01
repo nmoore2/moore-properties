@@ -23,6 +23,8 @@ gem 'mini_magick', '~> 4.6', '>= 4.6.1'
 
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
+gem 'devise'
+
 gem 'pry', '~> 0.10.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
