@@ -21,6 +21,7 @@
 
 $(document).ready(function() {
 
+  // image gallery lightbox
   $('.open-gallery-link').click(function(event) {
      event.preventDefault();
     var items = [];
@@ -39,8 +40,16 @@ $(document).ready(function() {
 
     });
   });
+
+  // google maps embed
+  $('.map-container').click(function(){
+      $(this).find('iframe').addClass('clicked')})
+    .mouseleave(function(){
+      $(this).find('iframe').removeClass('clicked')});
+
+
   // / lightbox
-  // 
+  //
   // $(".project-details").click(function() {
   //   window.location = $(this).find("a").attr("href");
   //   return false;
