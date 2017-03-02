@@ -14957,8 +14957,10 @@ $(function () {
     // google.maps.event.addDomListener(window, 'load', initMap);
 });
 //<![CDATA[
-        $(window).on('load', function() { // makes sure the whole site is loaded
-            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+        $(document).on('turbolinks:load', function() {// wait for turbolinks to load page
+            $('#preloader').delay(350).fadeOut('slow', function() {
+            });
+            // will fade out the white DIV that covers the website.
             $('body').delay(350).css({'overflow':'visible'});
         })
 //]]>
@@ -14994,9 +14996,9 @@ $(function () {
 // lightbox
 // This will create a single gallery from all elements that have class "lightbox"
 
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
 
-
+  // image gallery lightbox
   $('.open-gallery-link').click(function(event) {
      event.preventDefault();
     var items = [];
@@ -15006,7 +15008,7 @@ $(document).ready(function() {
       } );
     });
 
-    $.magnificPopup.open({
+    window.magnificPopup.open({
       items:items,
       gallery: {
         enabled: true
@@ -15016,6 +15018,19 @@ $(document).ready(function() {
     });
   });
 
+  // google maps embed
+  $('.map-container').click(function(){
+    console.log('didnt')
+      $(this).find('iframe').addClass('clicked')})
+    .mouseleave(function(){
+      $(this).find('iframe').removeClass('clicked')});
+
+
+
+  // / lightbox
+  //
+  // $(".project-details").click(function() {
+  //   window.location = $(this).find("a").attr("href");
+  //   return false;
+  // });
 });
-// / lightbox
-;
