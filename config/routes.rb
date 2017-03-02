@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   #-----------------------------------------
   # Admin Resources
   #-----------------------------------------
+  resources :pages
   devise_for :users
 
   devise_scope :user do
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
   #-----------------------------------------
   # Public
   #-----------------------------------------
-  # get '/property(/:id)', to: 'pages#property', as: 'prop'
+  get '/faq', to: 'visitors#faq', as: 'faq'
 
   root 'visitors#index'
 

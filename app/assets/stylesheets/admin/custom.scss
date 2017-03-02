@@ -12,6 +12,10 @@ footer {
   margin-top: 50px;
 }
 
+.main-content {
+  min-height: 70vh;
+}
+
 .btn input {
   background: transparent;
   border: none;
@@ -46,6 +50,14 @@ textarea {
   input {
     width: 30px;
     min-width: initial;
+  }
+}
+
+.pages {
+  table {
+    .btn {
+      float: right;
+    }
   }
 }
 
