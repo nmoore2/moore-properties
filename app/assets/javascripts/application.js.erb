@@ -19,13 +19,13 @@
 // lightbox
 // This will create a single gallery from all elements that have class "lightbox"
 
-$(document).on('turbolinks:load', function() {
+$(document).ready(function() {
 
   // image gallery lightbox
   $('.open-gallery-link').click(function(event) {
-     event.preventDefault();
+    //  event.preventDefault();
     var items = [];
-    $( $(this).attr('href') ).find('.slide').each(function() {
+    $($(this).attr('data-gallery')).find('.slide').each(function() {
       items.push( {
         src: $(this)
       } );

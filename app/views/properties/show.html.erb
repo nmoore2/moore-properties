@@ -5,7 +5,7 @@
             <!-- project content area -->
             <div class="col-sm-7">
               <div class="project-content-area">
-                  <a href="#gallery1" class="open-gallery-link">
+                  <a data-gallery="#gallery1" class="open-gallery-link">
                     <% if !@property.images.empty? %>
                       <div class="featured-img space-bottom-30" style="background-image: url(<%= cl_image_path @property.images.first.image.url %>)"></div>
                     <% end %>
@@ -55,7 +55,7 @@
 
                     <div class="info-buttons">
                       <%# if @property.images.count > 1 %>
-                        <a href="#gallery1" class="btn btn-primary-filled open-gallery-link"><i class="lnr lnr-eye"></i><span>View Photos</span></a>
+                        <a data-gallery="#gallery1" class="btn btn-primary-filled open-gallery-link"><i class="lnr lnr-eye"></i><span>View Photos</span></a>
                       <%# end %>
                         <a href="#" class="btn btn-default-filled"><i class="lnr lnr-pencil"></i><span>Apply</span></a>
                     </div><!-- / info-buttons -->
