@@ -11,3 +11,4 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( admin/theme.scss )
 Rails.application.config.assets.precompile += %w( admin/custom.scss )
+Rails.application.config.assets.precompile += %w( vendor/parallax.min.js )

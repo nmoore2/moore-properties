@@ -56,6 +56,10 @@
 
     <!-- javascript -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% if current_page?('/') %>
+      <%= javascript_include_tag 'vendor/parallax.min', 'data-turbolinks-track': 'reload' %>
+    <% end %>
+    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>  <script type="text/javascript">
 
 </script>

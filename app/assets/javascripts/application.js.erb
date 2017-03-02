@@ -19,13 +19,13 @@
 // lightbox
 // This will create a single gallery from all elements that have class "lightbox"
 
-$(document).ready(function() {
+$(document).on('turbolinks:load ready', function() {
 
   // image gallery lightbox
   $('.open-gallery-link').click(function(event) {
-    //  event.preventDefault();
+     event.preventDefault();
     var items = [];
-    $($(this).attr('data-gallery')).find('.slide').each(function() {
+    $($(this).attr('href')).find('.slide').each(function() {
       items.push( {
         src: $(this)
       } );
@@ -40,6 +40,17 @@ $(document).ready(function() {
 
     });
   });
+
+//   $('.gallery').magnificPopup({
+//
+//     type: 'image',
+//     delegate: 'a',
+//     removalDelay: 300,
+//     mainClass: 'mfp-with-fade',
+//
+//     gallery:{enabled:true}
+//
+// });
 
   // google maps embed
   $('.map-container').click(function(){
