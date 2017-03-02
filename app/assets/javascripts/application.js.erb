@@ -19,7 +19,7 @@
 // lightbox
 // This will create a single gallery from all elements that have class "lightbox"
 
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
 
   // image gallery lightbox
   $('.open-gallery-link').click(function(event) {
@@ -43,9 +43,11 @@ $(document).ready(function() {
 
   // google maps embed
   $('.map-container').click(function(){
+    console.log('didnt')
       $(this).find('iframe').addClass('clicked')})
     .mouseleave(function(){
       $(this).find('iframe').removeClass('clicked')});
+
 
 
   // / lightbox
