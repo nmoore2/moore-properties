@@ -1,0 +1,81 @@
+/* line 1, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+.site-width {
+  max-width: 1195px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+/* line 8, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+h1 {
+  margin-bottom: 40px;
+}
+
+/* line 12, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+footer {
+  margin-top: 100px;
+  height: 50px;
+}
+
+/* line 17, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+.main-content {
+  min-height: 70vh;
+}
+
+/* line 21, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+.btn input {
+  background: transparent;
+  border: none;
+}
+
+/* line 26, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+.new-item-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 32, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+input, textarea {
+  width: 100%;
+  min-width: 300px;
+}
+
+/* line 37, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+textarea {
+  min-height: 100px;
+}
+
+/* line 42, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+.actions {
+  padding: 20px 0;
+}
+
+/* line 47, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+.input-wrapper div {
+  margin: 10px 0;
+}
+
+/* line 52, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+.destroy-img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 58, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+.user_remember_me input {
+  width: 30px;
+  min-width: initial;
+}
+
+/* line 66, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+.pages table .btn {
+  float: right;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 73, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/admin/custom.scss */
+  .hidden-mobile {
+    display: none;
+  }
+}

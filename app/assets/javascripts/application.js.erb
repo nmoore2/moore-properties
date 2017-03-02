@@ -43,15 +43,14 @@ $(document).on('turbolinks:load ready', function() {
   });
 
   // faq page accordion
-  $('.collapse.in').prev('.panel-heading').addClass('active');
 
-  $('#accordion, #bs-collapse')
-    .on('show.bs.collapse', function(a) {
-      $(a.target).prev('.panel-heading').addClass('active');
-    })
-    .on('hide.bs.collapse', function(a) {
-      $(a.target).prev('.panel-heading').removeClass('active');
-    });
+  $('.panel-collapse').on('show.bs.collapse', function () {
+     $(this).siblings('.panel-heading').addClass('active');
+   });
+
+   $('.panel-collapse').on('hide.bs.collapse', function () {
+     $(this).siblings('.panel-heading').removeClass('active');
+   });
 
   // google maps embed
   $('.map-container').click(function(){
