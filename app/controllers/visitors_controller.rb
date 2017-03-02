@@ -6,7 +6,16 @@ class VisitorsController < ApplicationController
 
   def faq
     @properties = Property.all
-    @page = Page.find_by title: 'FAQ'
+    @faqs = Faq.all
   end
+
+  def contact
+    @properties = Property.all
+  end
+
+  def apply
+    @properties = Property.all
+  end
+
 
 end

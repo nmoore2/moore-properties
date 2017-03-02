@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :faqs
   #-----------------------------------------
   # Admin Resources
   #-----------------------------------------
@@ -19,7 +20,9 @@ Rails.application.routes.draw do
   #-----------------------------------------
   # Public
   #-----------------------------------------
-  get '/faq', to: 'visitors#faq', as: 'faq'
+  get '/faq', to: 'visitors#faq', as: 'faq_page'
+  get '/contact', to: 'visitors#contact', as: 'contact'
+  get '/apply', to: 'visitors#apply', as: 'apply'
 
   root 'visitors#index'
 

@@ -42,16 +42,16 @@ $(document).on('turbolinks:load ready', function() {
     });
   });
 
-//   $('.gallery').magnificPopup({
-//
-//     type: 'image',
-//     delegate: 'a',
-//     removalDelay: 300,
-//     mainClass: 'mfp-with-fade',
-//
-//     gallery:{enabled:true}
-//
-// });
+  // faq page accordion
+  $('.collapse.in').prev('.panel-heading').addClass('active');
+
+  $('#accordion, #bs-collapse')
+    .on('show.bs.collapse', function(a) {
+      $(a.target).prev('.panel-heading').addClass('active');
+    })
+    .on('hide.bs.collapse', function(a) {
+      $(a.target).prev('.panel-heading').removeClass('active');
+    });
 
   // google maps embed
   $('.map-container').click(function(){
@@ -60,12 +60,4 @@ $(document).on('turbolinks:load ready', function() {
     .mouseleave(function(){
       $(this).find('iframe').removeClass('clicked')});
 
-
-
-  // / lightbox
-  //
-  // $(".project-details").click(function() {
-  //   window.location = $(this).find("a").attr("href");
-  //   return false;
-  // });
 });

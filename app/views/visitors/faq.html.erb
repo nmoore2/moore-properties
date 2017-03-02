@@ -1,4 +1,35 @@
-<div class="site-width">
-  <h1><%= @page.title %></h1>
-  <%= @page.body %>
+<!-- header-banner -->
+<div id="header-banner">
+    <div class="banner-content single-page text-center">
+        <div class="banner-info">
+            <h1>FAQs</h1>
+            <p>Get answers to frequently asked questions.</p>
+        </div><!-- / banner-info -->
+    </div><!-- / banner-content -->
+</div>
+<!-- / header-banner -->
+<div class="site-width content">
+
+   <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+
+     <% @faqs.each_with_index do |faq, index| %>
+       <div class="panel">
+         <div class="panel-heading" role="tab" id="heading<%= index %>">
+           <h4 class="panel-title">
+             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= index %>" aria-expanded="true" aria-controls="collapseOne">
+               <%= faq.question %>
+             </a>
+             <span class="lnr lnr-chevron-down"></span>
+           </h4>
+         </div>
+         <div id="collapse<%= index %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<%= index %>">
+           <div class="panel-body">
+             <%= raw faq.answer %>
+           </div>
+         </div>
+       </div>
+     <% end %>
+     <!-- end of panel -->
+   </div>
+
 </div>

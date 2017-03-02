@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+  before_action :authenticate_user!, :except => [:show]
   before_action :set_image, only: [:show, :edit, :update, :destroy]
   skip_before_filter  :verify_authenticity_token
 

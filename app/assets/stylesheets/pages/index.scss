@@ -4,6 +4,9 @@
       cursor: pointer;
     }
   }
+  #header-banner {
+    background-color: transparent;
+  }
   .alert {
     margin-bottom: 0;
   }
@@ -14,6 +17,15 @@
     .project-hover-tools {
       width: 100%;
       top: 45%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .index {
+    #header-banner {
+      background: asset-url("2104_baybrook/front.jpg") no-repeat;
+      background-color: #ebebeb;
     }
   }
 }
