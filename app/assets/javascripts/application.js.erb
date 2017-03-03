@@ -17,7 +17,7 @@
 //= require ckeditor/init
 //= require_tree .
 
-document.addEventListener("turbolinks:load", function() {
+$(document).on('page:change turbolinks:load pagecontainerload', function() {
 
   // image gallery lightbox
   $('.open-gallery-link').click(function(event) {
@@ -30,7 +30,7 @@ document.addEventListener("turbolinks:load", function() {
     });
 
     $.magnificPopup.open({
-      items:items,
+      items: items,
       gallery: {
         enabled: true
       },

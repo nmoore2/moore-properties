@@ -18,8 +18,8 @@
 // accordions
 
 .panel-heading {
-  background-color: $primary;
-  color: #fff;
+  color: $primary;
+  border: 1px solid $primary !important;
   border-radius: 4px !important;
   padding: 0 !important;
   .panel-title {
@@ -31,7 +31,7 @@
       padding: 10px 0;
       line-height: 20px;
       &:hover, &:visited, &:focus {
-        color: #fff;
+        color: $primary;
       }
     }
     .lnr-chevron-down {
