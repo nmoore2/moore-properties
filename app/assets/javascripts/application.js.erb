@@ -17,7 +17,7 @@
 //= require ckeditor/init
 //= require_tree .
 
-$(document).on('page:change turbolinks:load pagecontainerload', function() {
+$(document).on('ready page:load', function() {
 
   // image gallery lightbox
   $('.open-gallery-link').click(function(event) {
