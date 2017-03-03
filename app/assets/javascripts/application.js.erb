@@ -17,10 +17,7 @@
 //= require ckeditor/init
 //= require_tree .
 
-// lightbox
-// This will create a single gallery from all elements that have class "lightbox"
-
-$(document).on('turbolinks:load ready', function() {
+document.addEventListener("turbolinks:load", function() {
 
   // image gallery lightbox
   $('.open-gallery-link').click(function(event) {
