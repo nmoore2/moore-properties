@@ -1,4 +1,7 @@
 .properties.show {
+  #page-content {
+    position: relative;
+  }
   .featured-img {
     background-repeat: no-repeat;
     height: 100%;
@@ -7,5 +10,10 @@
   }
   .pagination {
     height: 105px;
+  }
+  .edit-property {
+    position: absolute;
+    right: 15px;
+    top: 10px;
   }
 }
