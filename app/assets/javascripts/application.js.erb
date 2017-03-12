@@ -17,29 +17,20 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require_tree .
+//= require lightbox
 
-$(document).ready(function () { 
 
+$(document).ready(function () {
 
-  // image gallery lightbox
-  $('.open-gallery-link').click(function(event) {
-     event.preventDefault();
-    var items = [];
-    $($(this).attr('href')).find('.slide').each(function() {
-      items.push( {
-        src: $(this)
-      } );
-    });
+  // lightbox options
 
-    $.magnificPopup.open({
-      items: items,
-      gallery: {
-        enabled: true
-      },
-      closeBtnInside: false
-
-    });
-  });
+  lightbox.option({
+  'resizeDuration': 400,
+  'fadeDuration': 400,
+  'wrapAround': true,
+  'imageFadeDuration': 400,
+  'disableScrolling': true
+})
 
   // faq page accordion
 

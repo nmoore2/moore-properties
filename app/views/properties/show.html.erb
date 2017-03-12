@@ -5,18 +5,17 @@
             <!-- project content area -->
             <div class="col-sm-7">
               <div class="project-content-area">
-                  <a href="#gallery1" class="open-gallery-link">
+                <% @property.images.each_with_index do |image, i| %>
+                  <% if i == 0 %>
+                  <a href="<%= cl_image_path @property.images.first.image.url %>" data-lightbox="gallery">
                     <% if !@property.images.empty? %>
                       <div class="featured-img space-bottom-30" style="background-image: url(<%= cl_image_path @property.images.first.image.url %>)"></div>
                     <% end %>
                   </a>
-                    <div id="gallery1" class="mfp-hide gallery-container">
-                      <% @property.images.each do |image| %>
-                      <div class="slide">
-                          <%= cl_image_tag image.image %>
-                      </div>
-                      <% end %>
-                    </div>
+                  <% else %>
+                  <a href="<%= cl_image_path image.image %>" class="hidden" data-lightbox="gallery"></a>
+                  <% end %>
+                <% end %>
                 </div><!-- / project-content-area -->
             </div>
             <!-- / project-content-area -->

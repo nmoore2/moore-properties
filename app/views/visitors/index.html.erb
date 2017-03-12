@@ -22,22 +22,29 @@
             <li><a href="#" data-group="available">AVAILABLE</a></li>
         </ul>
         <!--end portfolio filter-->
-        <ul class="row portfolio list-unstyled lightbox" id="grid">
+        <ul class="row portfolio list-unstyled" id="grid">
             <!-- project -->
 
           <% @properties.each_with_index do |property, index| %>
             <li class="col-xs-6 col-md-4 project project-link" data-groups='["<%= property.available? ? 'available' : '' %>"]'>
                   <!-- / project-link -->
                   <% if !property.images.first.image.url.nil? %>
-                    <div href="#gallery<%= index %>" class="featured-img" style="background-image: url(<%= cl_image_path property.images.first.image.url %>)">
+                    <div href="" class="featured-img" style="background-image: url(<%= cl_image_path property.images.first.image.url %>)">
                       <!-- project-hover-tools -->
                       <div class="project-hover-tools center">
                           <a href="<%= property_path(property) %>" class="view-btn">
                               <i class="lnr lnr-eye"></i>
                           </a>
-                          <a href="#gallery<%= index %>" class="open-gallery open-gallery-link">
-                              <i class="lnr lnr-frame-expand"></i>
-                          </a>
+
+                          <% property.images.each_with_index do |image, i|  %>
+                            <% if i == 0 %>
+                              <a href="<%= property.images.first.image.url %>" class="open-gallery open-gallery-link" data-lightbox="gallery<%= index %>">
+                                  <i class="lnr lnr-frame-expand"></i>
+                              </a>
+                            <% else %>
+                              <a href="<%= cl_image_path image.image %>" class="hidden" data-lightbox="gallery<%= index %>"></a>
+                            <% end %>
+                          <% end %>
                       </div><!-- / project-hover-tools -->
                       <div class="overlay center"></div>
                     </div>
@@ -45,14 +52,6 @@
                     <img src="http://placehold.it/350x250" class='img-responsive'>
                   <% end %>
                   <!-- / project-image -->
-
-                  <div id="gallery<%= index %>" class="mfp-hide gallery-container">
-                    <% property.images.each do |image|  %>
-                    <div class="slide">
-                      <%= cl_image_tag image.image %>
-                    </div>
-                    <% end %>
-                  </div>
 
                   <!-- project-details -->
                 <a href="<%= property_path(property) %>" style="display: block;" class="img-bg-color primary">
