@@ -28,7 +28,7 @@
           <% @properties.each_with_index do |property, index| %>
             <li class="col-xs-6 col-md-4 project project-link" data-groups='["<%= property.available? ? 'available' : '' %>"]'>
                   <!-- / project-link -->
-                  <% if !property.images.first.image.url.nil? %>
+                  <% if property.images.count > 0 && !property.images.first.image.url.nil? %>
                     <div href="" class="featured-img" style="background-image: url(<%= cl_image_path property.images.first.image.url %>)">
                       <!-- project-hover-tools -->
                       <div class="project-hover-tools center">
