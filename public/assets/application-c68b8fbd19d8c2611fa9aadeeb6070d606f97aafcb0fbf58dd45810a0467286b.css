@@ -16255,6 +16255,10 @@ footer .social a {
 .faq .title {
   margin-top: 50px;
 }
+/* line 5, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/faqs.scss */
+.faq .content {
+  min-height: 75vh;
+}
 
 /* line 1, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
 .site-width {
@@ -16278,37 +16282,38 @@ footer .social a {
 
 /* line 20, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
 .panel-heading {
-  background-color: #c39d6d;
-  color: #fff;
+  color: #c39d6d !important;
+  border: 1px solid #c39d6d !important;
   border-radius: 4px !important;
   padding: 0 !important;
+  background-color: transparent !important;
 }
-/* line 25, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
+/* line 26, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
 .panel-heading .panel-title {
   position: relative;
   margin-left: 15px;
 }
-/* line 28, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
+/* line 29, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
 .panel-heading .panel-title a {
   display: block;
   width: 85%;
   padding: 10px 0;
   line-height: 20px;
 }
-/* line 33, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
+/* line 34, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
 .panel-heading .panel-title a:hover, .panel-heading .panel-title a:visited, .panel-heading .panel-title a:focus {
-  color: #fff;
+  color: #c39d6d;
 }
-/* line 37, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
+/* line 38, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
 .panel-heading .panel-title .lnr-chevron-down {
   position: absolute;
   right: 20px;
   top: 50%;
-  margin-top: -10px;
-  font-size: 20px;
+  margin-top: -8px;
+  font-size: 16px;
   transition: all 0.3s;
 }
-/* line 47, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
+/* line 48, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/global.scss */
 .panel-heading.active .lnr-chevron-down {
   transform: rotate(180deg);
   transition: all 0.3s;
@@ -16346,45 +16351,289 @@ footer .social a {
   }
 }
 /* line 2, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+.properties.show #page-content {
+  position: relative;
+}
+/* line 5, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
 .properties.show .featured-img {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   min-height: 530px;
 }
-/* line 8, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+/* line 11, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
 .properties.show .pagination {
   height: 105px;
 }
+/* line 14, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+.properties.show .edit-property {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+/* Preload images */
+/* line 2, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+body:after {
+  content: url("/assets/lightbox/close-5d62e6c90005bfb71f6abb440f9e4753681cb23bbd5e60477ab6f442d2f0e69c.png") url("/assets/lightbox/loading-225aa88b6ab02c06222ec9468d62e15fa188e39cdb9431d1f55401ad380753ed.gif") url("/assets/lightbox/prev-7fd9273f20fdb1229c224341271a119020a5eee74ccf6b4605730917c864caf2.png") url("/assets/lightbox/next-15b869b02c6fbaa8c6c26445a2dd2d9bad80fd27b1409f8179e5dd89dc89d90a.png");
+  display: none;
+}
+
+/* line 7, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+body.lb-disable-scrolling {
+  overflow: hidden;
+}
+
+/* line 11, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
+}
+
+/* line 22, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+}
+
+/* line 32, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  border-radius: 3px;
+}
+
+/* line 39, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lightbox a img {
+  border: none;
+}
+
+/* line 43, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-outerContainer {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+/* line 53, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 59, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-container {
+  padding: 4px;
+}
+
+/* line 63, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+/* line 73, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url("/assets/lightbox/loading-225aa88b6ab02c06222ec9468d62e15fa188e39cdb9431d1f55401ad380753ed.gif") no-repeat;
+}
+
+/* line 81, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+/* line 90, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-container > .nav {
+  left: 0;
+}
+
+/* line 94, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav a {
+  outline: none;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
+}
+
+/* line 99, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+/* line 105, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url("/assets/lightbox/prev-7fd9273f20fdb1229c224341271a119020a5eee74ccf6b4605730917c864caf2.png") left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+/* line 118, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 123, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url("/assets/lightbox/next-15b869b02c6fbaa8c6c26445a2dd2d9bad80fd27b1409f8179e5dd89dc89d90a.png") right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+/* line 136, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 141, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 154, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 160, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;
+}
+
+/* line 165, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+
+/* line 172, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+/* line 178, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999;
+}
+
+/* line 186, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url("/assets/lightbox/close-5d62e6c90005bfb71f6abb440f9e4753681cb23bbd5e60477ab6f442d2f0e69c.png") top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+/* line 202, /Users/nathan.moore/.rvm/gems/ruby-2.4.0-rc1/gems/lightbox2-rails-2.8.2.1/vendor/assets/stylesheets/lightbox.scss */
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
 
 /*styles to bring over:*/
-/* line 27, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 29, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .btn.apply {
   line-height: 30px;
   color: #fff;
   margin-top: 22px;
 }
 
-/* line 32, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 34, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .btn.apply:hover {
   background-color: #fff !important;
   color: #c39d6d !important;
   border: 2px solid #ad8b60 !important;
 }
 
-/* line 38, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 40, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .navbar-header > .navbar-brand {
   color: #111111 !important;
   margin-top: 10px;
 }
 
-/* line 43, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 45, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 #portfolio > .container > h5 {
   text-align: center;
   margin: 40px 0 30px 0;
 }
 
-/* line 48, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 50, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .slide {
   position: relative;
   margin: 0 auto;
@@ -16392,7 +16641,7 @@ footer .social a {
   width: auto;
 }
 
-/* line 55, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 57, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 #header-banner {
   background-color: #ebebeb;
   background-size: cover;
@@ -16401,75 +16650,75 @@ footer .social a {
   background-repeat: no-repeat;
 }
 
-/* line 66, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 68, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .project-info .info p {
   display: inline-block;
 }
 
-/* line 69, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 71, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .project-info .info .title {
   font-weight: bold;
 }
 
-/* line 72, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 74, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .project-info .info .details {
   max-width: 75%;
   vertical-align: top;
 }
 
-/* line 77, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 79, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .map-container {
   position: relative;
   /* IE needs a position other than static */
 }
 
-/* line 80, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 82, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .map-container iframe {
   width: 100%;
   min-height: 400px;
   pointer-events: none;
 }
 
-/* line 85, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 87, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .map-container iframe.clicked {
   pointer-events: auto;
 }
 
-/* line 89, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 91, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .navbar-toggle .icon-bar {
   width: 25px;
   transition: all 0.2s;
   height: 2px !important;
 }
 
-/* line 94, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 96, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .navbar-toggle .top-bar {
   transform: rotate(45deg);
   transform-origin: 10% 10%;
 }
 
-/* line 98, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 100, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .navbar-toggle .middle-bar {
   opacity: 0;
 }
 
-/* line 101, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 103, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .navbar-toggle .bottom-bar {
   transform: rotate(-45deg);
   transform-origin: 10% 90%;
 }
 
-/* line 105, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 107, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .navbar-toggle.collapsed .top-bar {
   transform: rotate(0);
 }
 
-/* line 108, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 110, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .navbar-toggle.collapsed .middle-bar {
   opacity: 1;
 }
 
-/* line 111, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
+/* line 113, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
 .navbar-toggle.collapsed .bottom-bar {
   transform: rotate(0);
 }
