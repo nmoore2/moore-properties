@@ -55,3 +55,41 @@
     }
   }
 }
+
+.accordion-toggle {
+  cursor: pointer;
+  border: 1px solid $primary !important;
+  border-radius: 4px !important;
+  background-color: transparent !important;
+  margin-bottom: 0;
+  margin-top: -1px;
+  position: relative;
+  p {
+    color: $primary !important;
+    max-width: 80%;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .lnr-chevron-down {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    color: $primary;
+  }
+  &.active {
+    .lnr-chevron-down {
+      transform: rotate(180deg);
+      transition: all 0.3s;
+    }
+  }
+}
+.accordion-content {
+  display: none;
+}
+.accordion-content.default {
+  display: block;
+}

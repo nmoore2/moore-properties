@@ -2,25 +2,16 @@
 <div class="site-width content">
 <h1>Frequently Asked Questions</h1>
 
-   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-     <% @faqs.each_with_index do |faq, i| %>
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="heading<%= i %>">
-          <h4 class="panel-title">
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= i %>" aria-expanded="true" aria-controls="collapseOne">
-               <%= faq.question %>
-            </a>
-            <div class="lnr lnr-chevron-down"></div>
-          </h4>
-        </div>
-        <div id="collapse<%= i %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<%= i %>">
-          <div class="panel-body">
-            <%= raw faq.answer %>
-          </div>
-        </div>
-      </div>
-      <!-- end of panel -->
-     <% end %>
-   </div>
 
+
+<div id="accordion">
+  <% @faqs.each_with_index do |faq, i| %>
+    <div class="accordion-toggle"><p><%= faq.question %></p>
+      <div class="lnr lnr-chevron-down"></div>
+    </div>
+    <div class="accordion-content">
+      <p><%= raw faq.answer %></p>
+    </div>
+  <% end %>
+</div>
 </div>
