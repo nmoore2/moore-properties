@@ -18,7 +18,7 @@ gem 'cloudinary'
 gem 'mini_magick', '~> 4.6', '>= 4.6.1'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'devise'
-gem 'ckeditor'
+gem 'ckeditor', git: "https://github.com/galetahub/ckeditor.git"
 gem 'pry', '~> 0.10.4'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
