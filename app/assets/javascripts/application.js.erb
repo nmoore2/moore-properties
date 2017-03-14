@@ -43,9 +43,13 @@ $(document).ready(function () {
 
   // google maps embed
   $('.map-container').click(function(){
-    console.log('didnt')
       $(this).find('iframe').addClass('clicked')})
     .mouseleave(function(){
       $(this).find('iframe').removeClass('clicked')});
+
+      // Launch lightbox gallery
+      $('#view-photos').click(function() {
+        $('.featured-img').trigger('click');
+      })
 
 });

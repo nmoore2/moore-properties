@@ -10,7 +10,7 @@
               <div class="project-content-area">
                 <% @property.images.each_with_index do |image, i| %>
                   <% if i == 0 %>
-                  <a href="<%= cl_image_path @property.images.first.image.url %>" data-lightbox="gallery">
+                  <a id="lightbox-inital" href="<%= cl_image_path @property.images.first.image.url %>" data-lightbox="gallery">
                     <% if !@property.images.empty? %>
                       <div class="featured-img space-bottom-30" style="background-image: url(<%= cl_image_path @property.images.first.image.url %>)"></div>
                     <% end %>
