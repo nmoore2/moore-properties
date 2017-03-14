@@ -16,6 +16,7 @@ module MooreRentals
     config.generators.javascripts = false
 
     config.assets.precompile += %w( ckeditor/* )
+    # Rails.application.config.assets.precompile += %w(ckeditor/* ckeditor/lang/*)
 
   end
 
