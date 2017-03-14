@@ -1,7 +1,4 @@
 <div id="page-content" class="container">
-  <% if user_signed_in? %>
-    <a href="<%= edit_property_path(@property)%>" class="btn btn-default edit-property"><i class="lnr lnr-highlight"></i><span>Edit Property</span></a>
-  <% end %>
     <!-- project content + sidebar -->
     <section id="project">
         <div class="row">
@@ -26,7 +23,11 @@
             <!-- project sidebar area -->
             <div class="col-sm-5 project-sidebar right">
                 <div class="section-description light">
-                    <h4>PROPERTY INFO</h4>
+                    <h4>PROPERTY INFO
+                      <% if user_signed_in? %>
+                        <a href="<%= edit_property_path(@property)%>" style="font-size: 16px;"> Edit Property</a>
+                      <% end %>
+                    </h4>
                     <div class="project-info">
                         <div class="info">
                             <p class="title"><i class="lnr lnr-map-marker"></i><span>Address: </span></p>

@@ -1,6 +1,11 @@
 
 <div class="site-width content">
-<h1>Frequently Asked Questions</h1>
+<h1>Frequently Asked Questions
+  <% if current_user.present? %>
+    <a href="/faqs" style="font-size: 16px;">Edit FAQs</a>
+  <% end %>
+</h1>
+
 
 
 
