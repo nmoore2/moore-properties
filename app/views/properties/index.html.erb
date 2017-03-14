@@ -24,7 +24,7 @@
           <td class="hidden-mobile"><%= property.rate %></td>
           <td class="hidden-mobile"><%= property.features %></td>
           <td class="hidden-mobile"><%= property.images.size %></td>
-          <td><%= link_to 'View', property, class: "btn btn-primary" %></td>
+          <td class="hidden-mobile"><%= link_to 'View', property, class: "btn btn-primary" %></td>
           <td><%= link_to 'Edit', edit_property_path(property), class: "btn btn-success" %></td>
           <td><%= link_to 'Delete', property, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>

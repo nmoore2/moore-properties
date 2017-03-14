@@ -17,3 +17,29 @@
     top: 10px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .properties.show {
+    .featured-img {
+      min-height: 218px;
+background-size: cover;
+    }
+    //.pagination {
+      .btn {
+        margin: 0 2%;
+        width: 45%;
+        padding: 10px;
+        span {
+          margin: 0;
+
+        }
+        .fa-long-arrow-left {
+          margin-right: 10px;
+        }
+        .fa-long-arrow-right {
+          margin-left: 10px;
+        }
+      }
+    //}
+  }
+}

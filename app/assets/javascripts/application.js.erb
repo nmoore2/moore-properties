@@ -31,16 +31,6 @@ $(document).ready(function () {
   'disableScrolling': true
 })
 
-  // faq page accordion
-
-  $('.panel-collapse').on('show.bs.collapse', function () {
-     $(this).siblings('.panel-heading').addClass('active');
-   });
-
-   $('.panel-collapse').on('hide.bs.collapse', function () {
-     $(this).siblings('.panel-heading').removeClass('active');
-   });
-
   // google maps embed
   $('.map-container').click(function(){
       $(this).find('iframe').addClass('clicked')})
