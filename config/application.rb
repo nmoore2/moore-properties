@@ -15,9 +15,6 @@ module MooreRentals
     config.generators.stylesheets = false
     config.generators.javascripts = false
 
-    # config.assets.precompile += %w( ckeditor/* )
-    Rails.application.config.assets.precompile += %w(ckeditor/* )
-
   end
 
 end
