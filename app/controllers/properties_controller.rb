@@ -17,7 +17,6 @@ class PropertiesController < ApplicationController
     @properties = Property.all
     @id = params[:id]
     @previous = Property.where("id < ?", @id).last
-    # @previous = @previous_props.first
     @next = Property.where("id > ?", @id).first
   end
 
