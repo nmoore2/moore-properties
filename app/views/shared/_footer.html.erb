@@ -3,8 +3,11 @@
     <footer>
       <div class="site-width">
 
-            <p class="footer-info">© <%= Time.current.year %> Moore Properties
+            <p class="footer-info">© <%= Time.current.year %> Moore Propertiess
             </p>
+            <% if current_user.present? %>
+              <a href="<%= admin_path %>"><span style="text-align: center; display: block; color: #000; text-decoration: underline;">Admin</span></a>
+            <% end %>
 
       </div>
 

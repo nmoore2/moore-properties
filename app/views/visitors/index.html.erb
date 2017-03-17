@@ -28,7 +28,7 @@
           <% @properties.each_with_index do |property, index| %>
             <li class="col-xs-6 col-md-4 project project-link" data-groups='["<%= property.available? ? 'available' : '' %>"]'>
                   <!-- / project-link -->
-                  <% if property.images.count > 0 && !property.images.first.image.url.nil? %>
+                  <% if property.images.count > 0 && !property.images.first.image.url.nil? && !property.visible %>
                     <div href="" class="featured-img" style="background-image: url(<%= cl_image_path property.images.first.image.url %>)">
                       <!-- project-hover-tools -->
                       <div class="project-hover-tools center">
@@ -57,7 +57,7 @@
                 <a href="<%= property_path(property) %>" style="display: block;" class="img-bg-color primary">
                   <div class="project-details">
                       <h5 class="project-title"><%= property.title %></h5>
-                      <p class="skill">3 bed, 2.5 bath</p>
+                      <p class="skill"><%= property.features %></p>
                   </div><!-- / project-details -->
                 </a>
 

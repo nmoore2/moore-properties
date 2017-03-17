@@ -49,6 +49,11 @@ textarea {
   }
 }
 
+.no-wrap {
+  text-align: right;
+  white-space: pre;
+}
+
 .destroy-img {
   display: block;
   margin: 0 auto;
