@@ -26,12 +26,13 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'jquery-turbolinks'
 gem 'lightbox2-rails'
+gem 'mail_form'
 
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'foreman'
 end
 
 group :development do

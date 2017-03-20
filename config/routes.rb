@@ -21,7 +21,8 @@ Rails.application.routes.draw do
   # Public
   #-----------------------------------------
   get '/faq', to: 'visitors#faq', as: 'faq_page'
-  get '/contact', to: 'visitors#contact', as: 'contact'
+  get '/contact', to: 'contacts#new', as: 'contact'
+  resources "contacts", only: [:new, :create]
   get '/apply', to: 'visitors#apply', as: 'apply'
 
   root 'visitors#index'
