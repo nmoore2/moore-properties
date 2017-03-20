@@ -25,7 +25,10 @@
                 </ul>
                 </li>
                 <li class="<%= 'active' if action_name == 'contact' %>"><a href="<%= contact_path %>"><span>CONTACT</span></a></li>
-                <li><a href="<%= apply_path %>" class="btn btn-primary-filled apply"><span> APPLY</span></a></li>
+                <li class="<%= 'active' if action_name == 'apply' %>"><a href="<%= apply_path %>" class="btn btn-primary-filled apply"><span> APPLY</span></a></li>
+                <% if current_user.present? %>
+                  <li><a href="<%= admin_path %>">ADMIN</a></li>
+                <% end %>
             </ul>
         </div><!--/ nav-collapse -->
     </div><!-- / container -->
