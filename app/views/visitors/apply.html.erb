@@ -12,10 +12,19 @@
     <div class="site-width">
       <div class="content">
         <p>
-    If you are interested in renting one of our available properties, click on the link below to download the application.  Fill it out, then either email it, fax it or mail it back to us.  Please be sure to include a number where you can be reached, and the address of the property you would like to rent.
-
+          If you are interested in renting one of our available properties, click on the link below to download the application. Fill it out, then either email it, fax it or mail it back to us and pay the application fee. Please be sure to include a number where you can be reached, and the address of the property you would like to rent.
         </p>
-        <a href="<%= asset_path '/assets/rental-application.doc' %>" download class="btn btn-default">Rental Application</a>
+        <a href="<%= asset_path '/assets/rental-application.doc' %>" download class="btn btn-default application-btn">Rental Application</a>
+
+        <div class="paypal-btn">
+          <p>Click here to pay the application fee: </p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="VLEWWUBPJLVXE">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        </div>
       </div>
     </div>
     <div id="page-content" class="container">
