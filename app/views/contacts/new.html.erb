@@ -1,3 +1,10 @@
+<div>
+  <% flash.each do |key, value| %>
+    <div>
+        <p class="alert <%= @contact.deliver ? 'alert-success' : 'alert-danger' %>"><%= value %></p>
+    </div>
+  <% end %>
+</div>
 <!-- header-banner -->
 <div id="header-banner">
     <div class="banner-content single-page text-center">
@@ -50,6 +57,9 @@
             </div>
             <div class="form-group">
               <%= f.input :email, required: true, label: false, placeholder: 'EMAIL', :input_html => {class: 'form-control'} %>
+              <% if @contact.errors %>
+                <p style="color: red;"><%= @email_error %></p>
+              <% end %>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
