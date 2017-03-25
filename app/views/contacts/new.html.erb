@@ -3,7 +3,7 @@
     <div class="banner-content single-page text-center">
         <div class="banner-info">
             <h1>CONTACT US</h1>
-            <p>Get in touch with Us.</p>
+            <p>Get in touch with us.</p>
         </div><!-- / banner-info -->
     </div><!-- / banner-content -->
 </div>
@@ -37,29 +37,32 @@
 
 <div class="row contact-area">
 
-    <div class="col-sm-6">
-      <%= image_tag 'contact-img', class: 'img-responsive' %>
-    </div>
+  <div class="col-sm-6">
+    <%= image_tag 'contact-img.jpg', class: 'contact-img' %>
+  </div>
+
     <div class="col-sm-6 contact-form-area">
-        <!-- contact form 1col -->
         <div id="contact-form">
-            <form id="contactForm" data-toggle="validator">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="name" placeholder="FULL NAME" required>
-                    <div class="help-block with-errors"></div>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="EMAIL" required>
-                    <div class="help-block with-errors"></div>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" class="form-control" rows="5" placeholder="MESSAGE" required></textarea>
+          <%= simple_form_for @contact, :html => {:'data-toggle' =>  'validator', multipart: true } do |f| %>
+            <div class="form-group">
+              <%= f.input :name, required: true, label: false, placeholder: 'FULL NAME', :input_html => {class: 'form-control'} %>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <%= f.input :email, required: true, label: false, placeholder: 'EMAIL', :input_html => {class: 'form-control'} %>
                 <div class="help-block with-errors"></div>
-                </div>
-                <button type="submit" id="form-submit" class="btn btn-md btn-primary-filled btn-form-submit">SUBMIT FORM</button>
-                <div id="msgSubmit" class="h3 text-center hidden"></div>
-                <div class="clearfix"></div>
-            </form>
+            </div>
+            <div class="form-group">
+              <%= f.input :message, as: :text, required: true, label: false, placeholder: 'MESSAGE', :input_html => {class: 'form-control', rows: 5} %>
+            <div class="help-block with-errors"></div>
+            </div>
+            <div class= "hidden">
+              <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+            </div>
+              <%= f.button :button, 'SUBMIT FORM', name: "commit", class: 'btn btn-md btn-primary-filled btn-form-submit' %>
+            <div id="msgSubmit" class="h3 text-center hidden"></div>
+            <div class="clearfix"></div>
+            <% end %>
         </div><!-- / contact form 1col -->
     </div><!-- / col-sm-6 -->
 </div><!-- / contact-area -->

@@ -1,21 +1,22 @@
 class VisitorsController < ApplicationController
+  before_action :set_property
 
   def index
-    @properties = Property.all
   end
 
   def faq
-    @properties = Property.all
     @faqs = Faq.all
   end
 
   def contact
-    @properties = Property.all
   end
 
   def apply
-    @properties = Property.all
   end
 
+  # Use callbacks to share common setup or constraints between actions.
+  def set_property
+    @properties = Property.all
+  end
 
 end
