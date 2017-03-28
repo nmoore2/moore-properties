@@ -28,6 +28,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'lightbox2-rails'
 gem 'mail_form'
+gem 'jquery-turbolinks'
 
 
 group :development, :test do
