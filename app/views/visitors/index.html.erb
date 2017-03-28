@@ -55,13 +55,16 @@
                   <!-- / project-image -->
 
                   <!-- mobile swiping -->
+                  <a href="<%= property_path(property) %>">
                     <div class="mobile-swiper visible-mobile">
-                      <div class="swiper-wrapper">
-                        <% property.images.each do |image|  %>
-                          <div class="swiper-slide" style="background-image: url(<%= cl_image_path image.image %>")></div>
-                        <% end %>
-                      </div>
+                        <div class="swiper-wrapper">
+                            <% property.images.each do |image|  %>
+                              <div class="swiper-slide" style="background-image: url(<%= cl_image_path image.image %>)"></div>
+                            <% end %>
+                        </div>
                     </div>
+                  </a>
+
                   <!-- / mobile swiper -->
 
                   <!-- project-details -->

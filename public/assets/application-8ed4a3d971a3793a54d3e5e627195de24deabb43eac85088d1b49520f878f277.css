@@ -11773,6 +11773,649 @@ button.close {
   animation-name: slideOutUp;
 }
 
+/**
+ * Swiper 3.4.2
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ *
+ * http://www.idangero.us/swiper/
+ *
+ * Copyright 2017, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us/
+ *
+ * Licensed under MIT
+ *
+ * Released on: March 10, 2017
+ */
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-no-flexbox .swiper-slide {
+  float: left;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-vertical > .swiper-wrapper {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-android .swiper-slide, .swiper-wrapper {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-multirow > .swiper-wrapper {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-free-mode > .swiper-wrapper {
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  margin: 0 auto;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-slide {
+  -webkit-flex-shrink: 0;
+  -ms-flex: 0 0 auto;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-autoheight, .swiper-container-autoheight .swiper-slide {
+  height: auto;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-autoheight .swiper-wrapper {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-transition-property: -webkit-transform,height;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform,height;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container .swiper-notification {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1000;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x;
+  touch-action: pan-x;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  -moz-background-size: 27px 44px;
+  -webkit-background-size: 27px 44px;
+  background-size: 27px 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+  left: 10px;
+  right: auto;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-button-prev.swiper-button-black, .swiper-container-rtl .swiper-button-next.swiper-button-black {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-button-prev.swiper-button-white, .swiper-container-rtl .swiper-button-next.swiper-button-white {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
+  right: 10px;
+  left: auto;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-button-next.swiper-button-black, .swiper-container-rtl .swiper-button-prev.swiper-button-black {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-button-next.swiper-button-white, .swiper-container-rtl .swiper-button-prev.swiper-button-white {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination.swiper-pagination-hidden {
+  opacity: 0;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: .2;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+button.swiper-pagination-bullet {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination-white .swiper-pagination-bullet {
+  background: #fff;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #007aff;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination-white .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination-black .swiper-pagination-bullet-active {
+  background: #000;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-vertical > .swiper-pagination-bullets {
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 5px 0;
+  display: block;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 5px;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination-progress {
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination-progress .swiper-pagination-progressbar {
+  background: #007aff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-rtl .swiper-pagination-progress .swiper-pagination-progressbar {
+  -webkit-transform-origin: right top;
+  -moz-transform-origin: right top;
+  -ms-transform-origin: right top;
+  -o-transform-origin: right top;
+  transform-origin: right top;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-horizontal > .swiper-pagination-progress {
+  width: 100%;
+  height: 4px;
+  left: 0;
+  top: 0;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-vertical > .swiper-pagination-progress {
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination-progress.swiper-pagination-white {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination-progress.swiper-pagination-white .swiper-pagination-progressbar {
+  background: #fff;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-pagination-progress.swiper-pagination-black .swiper-pagination-progressbar {
+  background: #000;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-3d {
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-3d .swiper-cube-shadow, .swiper-container-3d .swiper-slide, .swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top, .swiper-container-3d .swiper-wrapper {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-3d .swiper-slide-shadow-bottom, .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right, .swiper-container-3d .swiper-slide-shadow-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-3d .swiper-slide-shadow-left {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -moz-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-3d .swiper-slide-shadow-top {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-3d .swiper-slide-shadow-bottom {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-coverflow .swiper-wrapper, .swiper-container-flip .swiper-wrapper {
+  -ms-perspective: 1200px;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-cube, .swiper-container-flip {
+  overflow: visible;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-cube .swiper-slide, .swiper-container-flip .swiper-slide {
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 1;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-cube .swiper-slide .swiper-slide, .swiper-container-flip .swiper-slide .swiper-slide {
+  pointer-events: none;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-cube .swiper-slide-active, .swiper-container-cube .swiper-slide-active .swiper-slide-active, .swiper-container-flip .swiper-slide-active, .swiper-container-flip .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-cube .swiper-slide-shadow-bottom, .swiper-container-cube .swiper-slide-shadow-left, .swiper-container-cube .swiper-slide-shadow-right, .swiper-container-cube .swiper-slide-shadow-top, .swiper-container-flip .swiper-slide-shadow-bottom, .swiper-container-flip .swiper-slide-shadow-left, .swiper-container-flip .swiper-slide-shadow-right, .swiper-container-flip .swiper-slide-shadow-top {
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-cube .swiper-slide {
+  visibility: hidden;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-cube.swiper-container-rtl .swiper-slide {
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-cube .swiper-slide-active, .swiper-container-cube .swiper-slide-next, .swiper-container-cube .swiper-slide-next + .swiper-slide, .swiper-container-cube .swiper-slide-prev {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-cube .swiper-cube-shadow {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .6;
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+  z-index: 0;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-fade.swiper-container-free-mode .swiper-slide {
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-fade .swiper-slide {
+  pointer-events: none;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-fade .swiper-slide .swiper-slide {
+  pointer-events: none;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-fade .swiper-slide-active, .swiper-container-fade .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-zoom-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-zoom-container > canvas, .swiper-zoom-container > img, .swiper-zoom-container > svg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-scrollbar {
+  border-radius: 10px;
+  position: relative;
+  -ms-touch-action: none;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-horizontal > .swiper-scrollbar {
+  position: absolute;
+  left: 1%;
+  bottom: 3px;
+  z-index: 50;
+  height: 5px;
+  width: 98%;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-container-vertical > .swiper-scrollbar {
+  position: absolute;
+  right: 3px;
+  top: 1%;
+  z-index: 50;
+  width: 5px;
+  height: 98%;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-scrollbar-drag {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  left: 0;
+  top: 0;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-scrollbar-cursor-drag {
+  cursor: move;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-lazy-preloader {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -21px;
+  margin-top: -21px;
+  z-index: 10;
+  -webkit-transform-origin: 50%;
+  -moz-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-animation: swiper-preloader-spin 1s steps(12, end) infinite;
+  -moz-animation: swiper-preloader-spin 1s steps(12, end) infinite;
+  animation: swiper-preloader-spin 1s steps(12, end) infinite;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-lazy-preloader:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-position: 50%;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* line 15, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/vendor/swiper.min.scss */
+.swiper-lazy-preloader-white:after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+@-webkit-keyframes swiper-preloader-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes swiper-preloader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* Base CSS */
 /* line 6, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/components/theme.scss */
 body {
@@ -16239,7 +16882,7 @@ footer .social a {
 .site-width {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 15px;
 }
 
 /* line 7, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
@@ -16262,45 +16905,6 @@ footer .social a {
 }
 
 /* line 24, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
-.panel-heading {
-  color: #c39d6d !important;
-  border: 1px solid #c39d6d !important;
-  border-radius: 4px !important;
-  padding: 0 !important;
-  background-color: transparent !important;
-}
-/* line 30, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
-.panel-heading .panel-title {
-  position: relative;
-  margin-left: 15px;
-}
-/* line 33, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
-.panel-heading .panel-title a {
-  display: block;
-  width: 85%;
-  padding: 10px 0;
-  line-height: 20px;
-}
-/* line 38, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
-.panel-heading .panel-title a:hover, .panel-heading .panel-title a:visited, .panel-heading .panel-title a:focus {
-  color: #c39d6d;
-}
-/* line 42, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
-.panel-heading .panel-title .lnr-chevron-down {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  margin-top: -8px;
-  font-size: 16px;
-  transition: all 0.3s;
-}
-/* line 52, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
-.panel-heading.active .lnr-chevron-down {
-  transform: rotate(180deg);
-  transition: all 0.3s;
-}
-
-/* line 59, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
 .accordion-toggle {
   cursor: pointer;
   border: 1px solid #c39d6d !important;
@@ -16310,7 +16914,7 @@ footer .social a {
   margin-top: -1px;
   position: relative;
 }
-/* line 67, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+/* line 32, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
 .accordion-toggle p {
   color: #c39d6d !important;
   max-width: 80%;
@@ -16318,7 +16922,7 @@ footer .social a {
   font-weight: bold;
   margin-bottom: 0;
 }
-/* line 74, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+/* line 39, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
 .accordion-toggle .lnr-chevron-down {
   position: absolute;
   right: 20px;
@@ -16328,43 +16932,207 @@ footer .social a {
   transition: all 0.3s;
   color: #c39d6d;
 }
-/* line 84, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+/* line 49, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
 .accordion-toggle.active .lnr-chevron-down {
   transform: rotate(180deg);
   transition: all 0.3s;
 }
 
-/* line 90, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+/* line 55, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
 .accordion-content {
   display: none;
 }
 
-/* line 93, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+/* line 58, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
 .accordion-content.default {
   display: block;
 }
 
+/* line 63, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.swiper-wrapper.disabled {
+  transform: translate3d(0px, 0, 0) !important;
+}
+
+/* line 66, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.swiper-pagination.disabled {
+  display: none;
+}
+
+/* line 69, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.mobile-swiper {
+  overflow-x: hidden;
+}
+
+/* line 73, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.navbar-header > .navbar-brand {
+  color: #111111 !important;
+  margin-top: 10px;
+}
+
+/* line 78, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+#portfolio > .container > h5 {
+  text-align: center;
+  margin: 40px 0 30px 0;
+}
+
+/* line 83, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.slide {
+  position: relative;
+  margin: 0 auto;
+  max-width: 110vh;
+  width: auto;
+}
+
+/* line 90, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+#header-banner {
+  background-color: #ebebeb;
+  background-size: cover;
+  background-position: center;
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+}
+
+/* line 98, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.project-info .info p {
+  display: inline-block;
+}
+
+/* line 101, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.project-info .info .title {
+  font-weight: bold;
+}
+
+/* line 104, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.project-info .info .details {
+  max-width: 75%;
+  vertical-align: top;
+}
+
+/* line 109, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.navbar-toggle .icon-bar {
+  width: 25px;
+  transition: all 0.2s;
+  height: 2px !important;
+}
+
+/* line 114, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+/* line 118, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+
+/* line 121, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+/* line 125, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.navbar-toggle.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+/* line 128, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+
+/* line 131, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+/* line 134, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.map-container {
+  position: relative;
+  /* IE needs a position other than static */
+}
+
+/* line 137, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+.map-container iframe {
+  width: 100%;
+  min-height: 400px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 144, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+  .hidden-mobile {
+    display: none !important;
+  }
+
+  /* line 147, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+  .accordion-content p {
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 152, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+  .visible-mobile {
+    display: none !important;
+  }
+
+  /* line 155, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+  .map-container iframe {
+    pointer-events: none;
+  }
+
+  /* line 158, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/global.scss */
+  .map-container iframe.clicked {
+    pointer-events: auto;
+  }
+}
 /* line 1, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/shared/nav.scss */
 .nav {
   margin-top: 10px;
 }
+/* line 3, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/shared/nav.scss */
+.nav .btn.apply {
+  line-height: 30px;
+  color: #000;
+  margin-top: 22px;
+}
+/* line 8, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/shared/nav.scss */
+.nav .btn.apply:hover {
+  background-color: #fff !important;
+  color: #c39d6d !important;
+  border: 2px solid #ad8b60 !important;
+}
 
-/* line 4, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/shared/nav.scss */
+/* line 14, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/shared/nav.scss */
 .navbar-brand {
   padding: 0;
   margin: 0;
 }
-/* line 7, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/shared/nav.scss */
+/* line 17, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/shared/nav.scss */
 .navbar-brand .logo {
   max-height: none;
   height: 75px;
   margin-bottom: 10px;
 }
 
+/* line 1, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/apply.scss */
+.application-btn {
+  margin-left: 0;
+}
+
+/* line 4, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/apply.scss */
+.paypal-btn {
+  margin-top: 20px;
+}
+
 /* line 2, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/contact.scss */
 .contacts .contact-img {
   max-height: 382px;
   width: auto;
+}
+/* line 6, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/contact.scss */
+.contacts span.error {
+  color: red;
 }
 
 /* line 2, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/faqs.scss */
@@ -16399,12 +17167,35 @@ footer .social a {
   width: 100%;
   top: 45%;
 }
+/* line 22, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/index.scss */
+.index .slide-img {
+  min-height: 200px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+/* line 28, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/index.scss */
+.index .row.portfolio {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 
 @media screen and (max-width: 768px) {
-  /* line 26, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/index.scss */
+  /* line 36, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/index.scss */
   .index #header-banner {
     background: url(/2104_baybrook/front.jpg) no-repeat;
     background-color: #ebebeb;
+  }
+  /* line 41, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/index.scss */
+  .index .project:hover img {
+    opacity: 1;
+  }
+  /* line 45, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/index.scss */
+  .index .swiper-slide {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 250px;
   }
 }
 /* line 2, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
@@ -16431,27 +17222,66 @@ footer .social a {
 
 @media screen and (max-width: 767px) {
   /* line 23, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  .properties.show #page-content {
+    padding: 20px 0 0 0;
+  }
+  /* line 26, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  .properties.show h4 {
+    text-align: center;
+  }
+  /* line 29, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  .properties.show .project-sidebar.right {
+    margin-top: 20px;
+  }
+  /* line 32, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
   .properties.show .featured-img {
     min-height: 218px;
     background-size: cover;
   }
-  /* line 28, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  /* line 36, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  .properties.show .info-buttons {
+    margin-top: 10px;
+  }
+  /* line 39, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
   .properties.show .btn {
     margin: 0 2%;
     width: 45%;
     padding: 10px;
   }
-  /* line 32, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  /* line 43, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
   .properties.show .btn span {
     margin: 0;
   }
-  /* line 36, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  /* line 46, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
   .properties.show .btn .fa-long-arrow-left {
     margin-right: 10px;
   }
-  /* line 39, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  /* line 49, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
   .properties.show .btn .fa-long-arrow-right {
     margin-left: 10px;
+  }
+  /* line 52, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  .properties.show .btn.apply {
+    width: 100%;
+    margin: 0;
+  }
+  /* line 58, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  .properties.show .info .details {
+    max-width: 68%;
+    margin-left: 5px;
+  }
+  /* line 63, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  .properties.show .pagination {
+    margin-bottom: 0;
+    border-bottom: none;
+    height: 95px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 374px) {
+  /* line 74, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/pages/property.scss */
+  .info .details {
+    max-width: 60% !important;
   }
 }
 /* Preload images */
@@ -16687,122 +17517,3 @@ body.lb-disable-scrolling {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-
-/*styles to bring over:*/
-/* line 30, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.btn.apply {
-  line-height: 30px;
-  color: #fff;
-  margin-top: 22px;
-}
-
-/* line 35, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.btn.apply:hover {
-  background-color: #fff !important;
-  color: #c39d6d !important;
-  border: 2px solid #ad8b60 !important;
-}
-
-/* line 41, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.navbar-header > .navbar-brand {
-  color: #111111 !important;
-  margin-top: 10px;
-}
-
-/* line 46, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-#portfolio > .container > h5 {
-  text-align: center;
-  margin: 40px 0 30px 0;
-}
-
-/* line 51, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.slide {
-  position: relative;
-  margin: 0 auto;
-  max-width: 110vh;
-  width: auto;
-}
-
-/* line 58, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-#header-banner {
-  background-color: #ebebeb;
-  background-size: cover;
-  background-position: center;
-  background-color: #cccccc;
-  background-repeat: no-repeat;
-}
-
-/* line 67, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.project-info .info p {
-  display: inline-block;
-}
-
-/* line 70, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.project-info .info .title {
-  font-weight: bold;
-}
-
-/* line 73, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.project-info .info .details {
-  max-width: 75%;
-  vertical-align: top;
-}
-
-/* line 78, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.map-container {
-  position: relative;
-  /* IE needs a position other than static */
-}
-
-/* line 81, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.map-container iframe {
-  width: 100%;
-  min-height: 400px;
-  pointer-events: none;
-}
-
-/* line 86, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.map-container iframe.clicked {
-  pointer-events: auto;
-}
-
-/* line 90, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.navbar-toggle .icon-bar {
-  width: 25px;
-  transition: all 0.2s;
-  height: 2px !important;
-}
-
-/* line 95, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.navbar-toggle .top-bar {
-  transform: rotate(45deg);
-  transform-origin: 10% 10%;
-}
-
-/* line 99, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.navbar-toggle .middle-bar {
-  opacity: 0;
-}
-
-/* line 102, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.navbar-toggle .bottom-bar {
-  transform: rotate(-45deg);
-  transform-origin: 10% 90%;
-}
-
-/* line 106, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.navbar-toggle.collapsed .top-bar {
-  transform: rotate(0);
-}
-
-/* line 109, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.navbar-toggle.collapsed .middle-bar {
-  opacity: 1;
-}
-
-/* line 112, /Users/nathan.moore/Sites/moore-rentals/app/assets/stylesheets/application.scss */
-.navbar-toggle.collapsed .bottom-bar {
-  transform: rotate(0);
-}
-
-/*end styles to bring */

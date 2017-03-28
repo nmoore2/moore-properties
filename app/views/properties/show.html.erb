@@ -33,7 +33,7 @@
             <!-- project sidebar area -->
             <div class="col-sm-5 project-sidebar right">
                 <div class="section-description light">
-                    <h4>PROPERTY INFO
+                    <h4><%= @property.title %>
                       <% if user_signed_in? %>
                         <a href="<%= edit_property_path(@property)%>" style="font-size: 16px;"> Edit Property</a>
                       <% end %>

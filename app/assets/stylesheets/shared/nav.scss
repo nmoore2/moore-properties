@@ -1,5 +1,15 @@
 .nav {
   margin-top: 10px;
+  .btn.apply {
+    line-height: 30px;
+    color: #000;
+    margin-top: 22px;
+  }
+  .btn.apply:hover {
+    background-color: #fff !important;
+    color: #c39d6d !important;
+    border: 2px solid #ad8b60 !important;
+  }
 }
 .navbar-brand {
   padding: 0;
@@ -8,15 +18,5 @@
     max-height: none;
     height: 75px;
     margin-bottom: 10px;
-  }
-  .btn.apply {
-    line-height: 30px;
-    color:#fff;
-    margin-top: 22px;
-  }
-  .btn.apply:hover {
-    background-color: #fff !important;
-    color: #c39d6d !important;
-    border: 2px solid #ad8b60 !important;
   }
 }
