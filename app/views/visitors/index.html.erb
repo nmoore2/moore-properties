@@ -30,7 +30,7 @@
             <li class="col-xs-6 col-md-4 project project-link" data-groups='["<%= property.available? ? 'available' : '' %>"]'>
                   <!-- / project-link -->
                   <% if property.images.count > 0 && !property.images.first.image.url.nil? %>
-                    <div href="" class="featured-img" style="background-image: url(<%= cl_image_path property.images.first.image.url %>)">
+                    <div class="hidden-mobile featured-img" style="background-image: url(<%= cl_image_path property.images.first.image.url %>)">
                       <!-- project-hover-tools -->
                       <div class="project-hover-tools center">
                           <a href="<%= property_path(property) %>" class="view-btn">
@@ -53,6 +53,16 @@
                     <img src="http://placehold.it/350x250" class='img-responsive'>
                   <% end %>
                   <!-- / project-image -->
+
+                  <!-- mobile swiping -->
+                    <div class="mobile-swiper visible-mobile">
+                      <div class="swiper-wrapper">
+                        <% property.images.each do |image|  %>
+                          <div class="swiper-slide" style="background-image: url(<%= cl_image_path image.image %>")></div>
+                        <% end %>
+                      </div>
+                    </div>
+                  <!-- / mobile swiper -->
 
                   <!-- project-details -->
                 <a href="<%= property_path(property) %>" style="display: block;" class="img-bg-color primary">

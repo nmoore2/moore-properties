@@ -19,6 +19,16 @@
       top: 45%;
     }
   }
+  .slide-img {
+    min-height: 200px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+  .row.portfolio {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -26,6 +36,17 @@
     #header-banner {
       background: asset-url("2104_baybrook/front.jpg") no-repeat;
       background-color: #ebebeb;
+    }
+    .project:hover {
+      img {
+        opacity: 1;
+      }
+    }
+    .swiper-slide {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 250px;
     }
   }
 }

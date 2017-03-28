@@ -4,7 +4,7 @@
         <div class="row">
             <!-- project content area -->
             <div class="col-sm-7">
-              <div class="project-content-area">
+              <div class="project-content-area hidden-mobile">
                 <% @property.images.each_with_index do |image, i| %>
                   <% if i == 0 %>
                   <a id="lightbox-inital" href="<%= cl_image_path @property.images.first.image.url %>" data-lightbox="gallery">
@@ -17,6 +17,16 @@
                   <% end %>
                 <% end %>
                 </div><!-- / project-content-area -->
+
+                <!-- mobile swiper -->
+                <div class="project-content aread mobile-swiper visible-mobile">
+                  <div class="swiper-wrapper">
+                    <% @property.images.each do |image|  %>
+                      <div class="swiper-slide"><%= cl_image_tag image.image, class: 'slide-img' %></div>
+                    <% end %>
+                  </div>
+                </div>
+                <!-- / mobile swiper -->
             </div>
             <!-- / project-content-area -->
 
@@ -57,8 +67,8 @@
                     </div><!-- / project-info -->
 
                     <div class="info-buttons">
-                        <a id="view-photos" class="btn btn-primary-filled open-gallery-link"><i class="lnr lnr-eye"></i><span>View Photos</span></a>
-                        <a href="<%= apply_path %>" class="btn btn-default-filled"><i class="lnr lnr-pencil"></i><span>Apply</span></a>
+                        <a id="view-photos" class="btn btn-primary-filled open-gallery-link hidden-mobile"><i class="lnr lnr-eye"></i><span>View Photos</span></a>
+                        <a href="<%= apply_path %>" class="btn btn-default-filled apply"><i class="lnr lnr-pencil"></i><span>Apply</span></a>
                         <%  %>
                     </div><!-- / info-buttons -->
 

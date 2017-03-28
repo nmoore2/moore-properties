@@ -1,7 +1,7 @@
 .site-width {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 15px;
 }
 
 .center {
@@ -19,43 +19,8 @@
   overflow: hidden !important;
   margin-right: 15px;
 }
+
 // accordions
-
-.panel-heading {
-  color: $primary !important;
-  border: 1px solid $primary !important;
-  border-radius: 4px !important;
-  padding: 0 !important;
-  background-color: transparent !important;
-  .panel-title {
-    position: relative;
-    margin-left: 15px;
-    a {
-      display: block;
-      width: 85%;
-      padding: 10px 0;
-      line-height: 20px;
-      &:hover, &:visited, &:focus {
-        color: $primary;
-      }
-    }
-    .lnr-chevron-down {
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      margin-top: -8px;
-      font-size: 16px;
-      transition: all 0.3s;
-    }
-  }
-  &.active {
-    .lnr-chevron-down {
-      transform: rotate(180deg);
-      transition: all 0.3s;
-    }
-  }
-}
-
 .accordion-toggle {
   cursor: pointer;
   border: 1px solid $primary !important;
@@ -92,4 +57,106 @@
 }
 .accordion-content.default {
   display: block;
+}
+
+// Swiper
+.swiper-wrapper.disabled {
+    transform: translate3d(0px, 0, 0) !important;
+}
+.swiper-pagination.disabled {
+    display: none;
+}
+.mobile-swiper {
+  overflow-x: hidden;
+}
+
+ .navbar-header > .navbar-brand {
+   color: #111111 !important;
+   margin-top: 10px;
+ }
+
+ #portfolio > .container > h5  {
+   text-align: center;
+   margin: 40px 0 30px 0;
+ }
+
+ .slide {
+   position: relative;
+   margin: 0 auto;
+   max-width: 110vh;
+   width: auto;
+ }
+
+ #header-banner {
+   background-color: #ebebeb;
+   background-size: cover;
+   background-position: center;
+   background-color: #cccccc;
+   background-repeat: no-repeat;
+ }
+
+ .project-info .info p {
+  display: inline-block;
+ }
+ .project-info .info .title {
+   font-weight: bold;
+ }
+ .project-info .info .details {
+   max-width: 75%;
+   vertical-align: top;
+ }
+
+ .navbar-toggle .icon-bar {
+   width: 25px;
+   transition: all 0.2s;
+   height: 2px !important;
+ }
+ .navbar-toggle .top-bar {
+   transform: rotate(45deg);
+   transform-origin: 10% 10%;
+ }
+ .navbar-toggle .middle-bar {
+   opacity: 0;
+ }
+ .navbar-toggle .bottom-bar {
+   transform: rotate(-45deg);
+   transform-origin: 10% 90%;
+ }
+ .navbar-toggle.collapsed .top-bar {
+   transform: rotate(0);
+ }
+ .navbar-toggle.collapsed .middle-bar {
+   opacity: 1;
+ }
+ .navbar-toggle.collapsed .bottom-bar {
+   transform: rotate(0);
+ }
+ .map-container {
+   position: relative; /* IE needs a position other than static */
+ }
+ .map-container iframe{
+   width: 100%;
+   min-height: 400px;
+ }
+// media queries
+
+@media screen and (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+  .accordion-content p {
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .visible-mobile {
+    display: none !important;
+  }
+  .map-container iframe {
+    pointer-events: none;
+  }
+  .map-container iframe.clicked {
+    pointer-events: auto;
+  }
+
 }

@@ -20,26 +20,56 @@
 
 @media screen and (max-width: 767px) {
   .properties.show {
+    #page-content {
+      padding: 20px 0 0 0;
+    }
+    .project-sidebar.right {
+      margin-top: 20px;
+    }
     .featured-img {
       min-height: 218px;
-background-size: cover;
+      background-size: cover;
     }
-    //.pagination {
-      .btn {
-        margin: 0 2%;
-        width: 45%;
-        padding: 10px;
-        span {
-          margin: 0;
-
-        }
-        .fa-long-arrow-left {
-          margin-right: 10px;
-        }
-        .fa-long-arrow-right {
-          margin-left: 10px;
-        }
+    .info-buttons {
+      margin-top: 10px;
+    }
+    .btn {
+      margin: 0 2%;
+      width: 45%;
+      padding: 10px;
+      span {
+        margin: 0;
       }
-    //}
+      .fa-long-arrow-left {
+        margin-right: 10px;
+      }
+      .fa-long-arrow-right {
+        margin-left: 10px;
+      }
+      &.apply {
+        width: 100%;
+        margin: 0;
+      }
+    }
+    .info {
+      .details {
+        max-width: 68%;
+        margin-left: 5px;
+      }
+    }
+    .pagination {
+      margin-bottom: 0;
+      border-bottom: none;
+      height: 95px;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .info {
+    .details {
+      max-width: 60% !important;
+    }
   }
 }

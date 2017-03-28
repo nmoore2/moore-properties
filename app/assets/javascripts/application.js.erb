@@ -30,16 +30,24 @@ $(document).ready(function () {
   'disableScrolling': true
 })
 
-  // google maps embed
-  $('.map-container').click(function(){
-      $(this).find('iframe').addClass('clicked')})
-    .mouseleave(function(){
-      $(this).find('iframe').removeClass('clicked')});
+// Initialize Swiper
+  var mySwiper = new Swiper('.mobile-swiper', {
+      speed: 400,
+      xspaceBetween: 100
+  });
 
-  // Launch lightbox gallery
-  $('#view-photos').click(function() {
-    $('.featured-img').trigger('click');
-  })
+ if ($(window).width() > 767) {
+    // google maps embed
+    $('.map-container').click(function(){
+        $(this).find('iframe').addClass('clicked')})
+      .mouseleave(function(){
+        $(this).find('iframe').removeClass('clicked')});
+  }
+
+    // Launch lightbox gallery
+    $('#view-photos').click(function() {
+      $('.featured-img').trigger('click');
+    })
 
   //accordions
 
