@@ -1,5 +1,5 @@
 //<![CDATA[
-        $(document).on('turbolinks:load', function() {// wait for turbolinks to load page
+        $(document).on('ready', function() {// wait for turbolinks to load page
             $('#preloader').delay(350).fadeOut('slow', function() {
             });
             // will fade out the white DIV that covers the website.

@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,  user-scalable=false">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Minimal Portfolio Theme">
 <meta name="keywords" content="responsive, retina ready, html5, css3, creative, portfolio, bootstrap theme" />
 <meta name="author" content="KingStudio.ro">
@@ -56,11 +56,12 @@
     <!-- javascript -->
     <!-- <script> var CKEDITOR_BASEPATH = '/assets/ckeditor/';</script> -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-eval' => false %>
     <% if current_page?('/') %>
       <%= javascript_include_tag 'vendor/parallax.min', 'data-turbolinks-track': 'reload'  %>
     <% end %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js" data-turbolinks-track="reload" ></script>
+
 
     <!-- / javascript -->
     </body>
