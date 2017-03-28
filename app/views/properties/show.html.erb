@@ -21,9 +21,9 @@
                 <!-- mobile swiper -->
                 <div class="project-content aread mobile-swiper visible-mobile">
                   <div class="swiper-wrapper">
-                    <% @property.images.each do |image|  %>
-                      <div class="swiper-slide"><%= cl_image_tag image.image, class: 'slide-img' %></div>
-                    <% end %>
+                      <% @property.images.each do |image|  %>
+                        <div class="swiper-slide" style="background-image: url(<%= cl_image_path image.image %>)"></div>
+                      <% end %>
                   </div>
                 </div>
                 <!-- / mobile swiper -->
