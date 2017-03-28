@@ -53,17 +53,19 @@
                         <div class="info">
                             <p><i class="lnr lnr-star"></i><span><strong>Features: </strong><%= @property.features %></span></p>
                         </div>
-                        <%# if !@property.rate.empty? %>
-                        <div class="info">
-                            <p><i class="lnr lnr-calendar-full"></i><span><strong>Rate: </strong><%= @property.rate %></span></p>
-                        </div>
-                        <%# end %>
+                        <% if !@property.rate.empty? %>
+                          <div class="info">
+                              <p><i class="lnr lnr-calendar-full"></i><span><strong>Rate: </strong><%= @property.rate %></span></p>
+                          </div>
+                        <% end %>
                         <div class="info">
                             <p><i class="lnr lnr-question-circle"></i><span><strong>Pets: </strong><%= @property.pets %></span></p>
                         </div>
-                        <div class="info">
-                            <p><i class="lnr lnr-car"></i><span><strong>Directions: </strong><%= @property.directions %></span></p>
-                        </div>
+                        <% if !@property.directions.empty? %>
+                          <div class="info">
+                              <p><i class="lnr lnr-car"></i><span><strong>Directions: </strong><%= @property.directions %></span></p>
+                          </div>
+                        <% end %>
                     </div><!-- / project-info -->
 
                     <div class="info-buttons">
