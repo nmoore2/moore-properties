@@ -29,13 +29,14 @@ $(document).ready(function () {
   'disableScrolling': true
 })
 
-// Initialize Swiper
-  var mySwiper = new Swiper('.mobile-swiper', {
-      speed: 400,
-      xspaceBetween: 100
-  });
+  if ($(window).width() > 767) {
 
- if ($(window).width() > 767) {
+    // Initialize Swiper
+    var mySwiper = new Swiper('.mobile-swiper', {
+        speed: 400,
+        xspaceBetween: 100
+    });
+
     // google maps embed
     $('.map-container').click(function(){
         $(this).find('iframe').addClass('clicked')})

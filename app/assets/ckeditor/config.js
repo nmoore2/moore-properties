@@ -8,7 +8,7 @@ CKEDITOR.editorConfig = function( config )
   // Define changes to default configuration here. For example:
   // config.language = 'fr';
   // config.uiColor = '#AADC6E';
-
+  
   /* Filebrowser routes */
   // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files";
@@ -34,13 +34,13 @@ CKEDITOR.editorConfig = function( config )
   config.allowedContent = true;
 
   config.toolbar = 'Full';
- 
+
   // config.toolbar_Full =
   // [
   // 	{ name: 'document', items : [ 'Source','-','Save','NewPage','DocProps','Preview','Print','-','Templates' ] },
   // 	{ name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
   // 	{ name: 'editing', items : [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ] },
-  // 	{ name: 'forms', items : [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 
+  // 	{ name: 'forms', items : [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
   //         'HiddenField' ] },
   // 	'/',
   // 	{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
@@ -53,23 +53,22 @@ CKEDITOR.editorConfig = function( config )
   // 	{ name: 'colors', items : [ 'TextColor','BGColor' ] },
   // 	{ name: 'tools', items : [ 'Maximize', 'ShowBlocks','-','About' ] }
   // ];
- 
+
   config.toolbar_Basic =
   [
   	['Bold', 'Italic', 'HorizontalRule', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink','-','Source']
   ];
-  
+
   config.toolbar_Mini =
   [
   	['Bold', 'Italic']
   ];
-  
+
   config.toolbar_Full =
   [
   	['Bold', 'Italic', 'HorizontalRule', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink','-','Source','-','Image']
   ];
-  
-  
+
+
 }
 };
-
