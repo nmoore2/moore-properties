@@ -6,7 +6,7 @@
   <% end %>
 </div>
 <!-- header-banner -->
-<div id="header-banner">
+<div id="header-banner" class="parallax" data-parallax="scroll" data-image-src="<%= asset_url 'mu-campus.jpg' %>">
     <div class="banner-content single-page text-center">
         <div class="banner-info">
             <h1>CONTACT US</h1>
@@ -30,7 +30,7 @@
             <i class="lnr lnr-smartphone"></i>
         </div>
         <h5>PHONE</h5>
-        <p>Office: <a href="tel:+5738741207">(573)-874-1207 </a></p>
+        <p>Office: <a href="tel:+5738195450">(573) 819-5450</a></p>
     </div><!-- / contact-info -->
     <div class="col-sm-4 contact-info text-center space-bottom">
         <div class="contact-icon">
@@ -44,11 +44,12 @@
 
 <div class="row contact-area">
 
-  <div class="col-sm-6">
-    <%= image_tag 'contact-img.jpg', class: 'contact-img' %>
+  <div class="col-sm-6 hidden-mobile">
+    <%= image_tag 'front.jpg', class: 'contact-img' %>
   </div>
 
     <div class="col-sm-6 contact-form-area">
+      <h5 class="visible-mobile">Send us a message:</h5>
         <div id="contact-form">
           <%= simple_form_for @contact, :html => {:'data-toggle' =>  'validator', multipart: true } do |f| %>
             <div class="form-group">

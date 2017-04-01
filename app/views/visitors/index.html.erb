@@ -1,9 +1,9 @@
 <!-- header-banner -->
-<div id="header-banner" class="demo-1 parallax" data-parallax="scroll" data-image-src="<%= asset_url 'front.jpg' %>">
+<div id="header-banner" class="parallax" data-parallax="scroll" data-image-src="<%= asset_url 'front.jpg' %>">
   <div class="banner-content text-center">
       <div class="banner-info">
           <h1>Moore Properties</h1>
-          <p>Homes for rent in Columbia, Missouri</p>
+          <p>Homes for rent in Columbia, Missouri</h>
       </div><!-- / banner-info -->
   </div><!-- / banner-content -->
 </div>
@@ -14,13 +14,15 @@
     <div class="container">
         <!-- portfolio filter -->
         <h5>View our rentals</h5>
-        <ul class="portfolio-filter list-inline text-center">
-          <p>
-            FILTER BY:
-          </p>
-            <li><a href="#" data-group="all" class="active">ALL</a></li>
-            <li><a href="#" data-group="available">AVAILABLE</a></li>
-        </ul>
+        <% if @availability %>
+          <ul class="portfolio-filter list-inline text-center">
+            <p>
+              FILTER BY:
+            </p>
+              <li><a href="#" data-group="all" class="active">ALL</a></li>
+              <li><a href="#" data-group="available">AVAILABLE</a></li>
+          </ul>
+        <% end %>
         <!--end portfolio filter-->
         <ul class="row portfolio list-unstyled" id="grid">
             <!-- project -->
@@ -70,7 +72,7 @@
                 <a href="<%= property_path(property) %>" style="display: block;" class="img-bg-color primary">
                   <div class="project-details">
                       <h5 class="project-title"><%= property.title %></h5>
-                      <p class="skill"><%= property.features %></p>
+                      <p class="skill"><%= property.features.first(27) %></p>
                   </div><!-- / project-details -->
                 </a>
 

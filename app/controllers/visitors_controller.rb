@@ -2,6 +2,12 @@ class VisitorsController < ApplicationController
   before_action :set_property
 
   def index
+    @availability = false
+    @properties.each do |property|
+      if property.available
+        @availability = true
+      end
+    end
   end
 
   def faq
