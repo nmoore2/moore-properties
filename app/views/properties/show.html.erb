@@ -5,26 +5,34 @@
             <!-- project content area -->
             <div class="col-sm-7">
               <div class="project-content-area hidden-mobile">
-                <% @property.images.each_with_index do |image, i| %>
-                  <% if i == 0 %>
-                  <a id="lightbox-inital" href="<%= cl_image_path @property.images.first.image.url %>" data-lightbox="gallery">
-                    <% if !@property.images.empty? %>
-                      <div class="featured-img space-bottom-30" style="background-image: url(<%= cl_image_path @property.images.first.image.url %>)"></div>
+                <% if @property.images.empty? %>
+                  <%= image_tag 'no-image.png', style: 'max-height: 300px; width: auto;' %>
+                <% else %>
+                  <% @property.images.each_with_index do |image, i| %>
+                    <% if i == 0 %>
+                    <a id="lightbox-inital" href="<%= cl_image_path @property.images.first.image.url %>" data-lightbox="gallery">
+                      <% if !@property.images.empty? %>
+                        <div class="featured-img space-bottom-30" style="background-image: url(<%= cl_image_path @property.images.first.image.url %>)"></div>
+                      <% end %>
+                    </a>
+                    <% else %>
+                    <a href="<%= cl_image_path image.image %>" class="hidden" data-lightbox="gallery"></a>
                     <% end %>
-                  </a>
-                  <% else %>
-                  <a href="<%= cl_image_path image.image %>" class="hidden" data-lightbox="gallery"></a>
                   <% end %>
                 <% end %>
                 </div><!-- / project-content-area -->
 
                 <!-- mobile swiper -->
                 <div class="project-content aread mobile-swiper visible-mobile">
-                  <div class="swiper-wrapper">
+                    <% if @property.images.empty? %>
+                      
+                    <% else %>
+                    <div class="swiper-wrapper">
                       <% @property.images.each do |image|  %>
                         <div class="swiper-slide" style="background-image: url(<%= cl_image_path image.image %>)"></div>
                       <% end %>
-                  </div>
+                    </div>
+                    <% end %>
                 </div>
                 <!-- / mobile swiper -->
             </div>
