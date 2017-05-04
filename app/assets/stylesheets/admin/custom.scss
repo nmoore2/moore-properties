@@ -29,7 +29,7 @@ footer {
   top: 0;
 }
 
-input, textarea {
+input[type="submit"], input[type="text"], textarea {
   width: 100%;
   min-width: 300px;
 }
